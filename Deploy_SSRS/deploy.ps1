@@ -32,7 +32,8 @@
 	###                   Create Folders                          ###
 	#################################################################
 	
-		./PowerShell/Report_Folder.ps1 -SSRSReportFolder $_SSRSReportFolder -SSRSReportServerUrl $_SSRSReportServerUrl
+	cd PowerShell
+		#./PowerShell/Report_Folder.ps1 -SSRSReportFolder $_SSRSReportFolder -SSRSReportServerUrl $_SSRSReportServerUrl
 		#./Report_Folder.ps1 -SSRSReportFolder "Coast" -SSRSReportServerUrl "http://NIBS/ReportServer/ReportService2010.asmx"
 		 #Write-Host -fore Green "Folder Created => " $_SSRSReportFolder
 	
