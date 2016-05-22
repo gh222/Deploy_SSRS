@@ -1,0 +1,7 @@
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\bin\Debug\Deploy_SSRS.exe.config
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\bin\Debug\Deploy_SSRS.exe
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\bin\Debug\Deploy_SSRS.pdb
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\obj\Debug\Deploy_SSRS.exe
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\obj\Debug\Deploy_SSRS.pdb
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\obj\Debug\Deploy_SSRS.csprojResolveAssemblyReference.cache
+E:\11 GitHub\Deploy_SSRS\Deploy_SSRS\bin\Debug\System.Web.Services.dll

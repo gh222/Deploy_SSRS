@@ -1,0 +1,1 @@
+nuget pack Deploy_SSRS.csproj
