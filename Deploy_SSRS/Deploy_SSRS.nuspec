@@ -12,5 +12,6 @@
   <files>
     <file src="*..\RDL\*.rdl" target="Reports" />
     <file src="..\RDL\*.sql" target="Sql" />
+    <file src="..\RDL\Scripts\Dependencies\*.sql" target="Sql\Scripts\Dependencies" />
   </files>
 </package>
