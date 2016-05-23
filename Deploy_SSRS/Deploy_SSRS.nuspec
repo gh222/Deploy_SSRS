@@ -5,6 +5,7 @@
     <title>Report PAckage</title>
     <authors>Ajilon</authors>
     <owners>Ajilon</owners>
+  <version>$version$</version>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Contains all SQL Server Reporting Services reports and scripts required to create a fully functional environment</description>
   </metadata>
