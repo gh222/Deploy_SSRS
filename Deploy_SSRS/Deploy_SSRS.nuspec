@@ -3,7 +3,7 @@
   <metadata>
     <id>Reports</id>
     <title>Report PAckage</title>
-    <version>5.0.0</version>
+    <version>$version$</version>
     <authors>Ajilon</authors>
     <owners>Ajilon</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
