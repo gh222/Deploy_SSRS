@@ -24,7 +24,8 @@ param(		 [string]$DataSource_Server
 	$SSRSReportServerUrl  = "http://"+$SSRS_Server+"/ReportServer/ReportService2010.asmx"
 	#>
 
-	
+	#./PowerShell/Report_DataSource.ps1 -DataSource_Server $DataSource_Server 	-DataSource_Database $DataSource_Database -DataSourceName $DataSourceName -DataSourceUserName $DataSourceUserName -DataSourceUserPassword $DataSourceUserPassword -SSRS_Server $SSRS_Server -SSRSReportFolder $SSRSReportFolder -SSRSReportServerUrl $SSRSReportServerUrl
+
 	#################################################################
 	###                  Create DataSource                        ###
 	#################################################################

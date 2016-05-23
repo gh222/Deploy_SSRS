@@ -40,14 +40,14 @@ param(		 [string]$SSRSReportFolder
 	
 	#cd PowerShell
 		./PowerShell/Report_Folder.ps1 -SSRSReportFolder $_SSRSReportFolder -SSRSReportServerUrl $_SSRSReportServerUrl
-		#./Report_Folder.ps1 -SSRSReportFolder "Coast" -SSRSReportServerUrl "http://NIBS/ReportServer/ReportService2010.asmx"
+		#./PowerShell/Report_Folder.ps1 -SSRSReportFolder "Coast" -SSRSReportServerUrl "http://NIBS/ReportServer/ReportService2010.asmx"
 		 #Write-Host -fore Green "Folder Created => " $_SSRSReportFolder
 	
 	#################################################################
 	###                   Create Data Source                      ###
 	#################################################################
 
-		#./Report_DataSource.ps1 -DataSource_Server $_DataSource_Server 	-DataSource_Database $_DataSource_Database -DataSourceName $_DataSourceName -DataSourceUserName $_DataSourceUserName -DataSourceUserPassword $_DataSourceUserPassword -SSRS_Server $_SSRS_Server -SSRSReportFolder $_SSRSReportFolder -SSRSReportServerUrl $_SSRSReportServerUrl
+		#./PowerShell/Report_DataSource.ps1 -DataSource_Server $_DataSource_Server 	-DataSource_Database $_DataSource_Database -DataSourceName $_DataSourceName -DataSourceUserName $_DataSourceUserName -DataSourceUserPassword $_DataSourceUserPassword -SSRS_Server $_SSRS_Server -SSRSReportFolder $_SSRSReportFolder -SSRSReportServerUrl $_SSRSReportServerUrl
 		#Write-Host -fore Green "Data Source Created => " $_DataSourceName
 		
 	#################################################################
@@ -55,5 +55,5 @@ param(		 [string]$SSRSReportFolder
 	#################################################################
 		
 		
-		#./Report_Upload.ps1
+		#./PowerShell/Report_Upload.ps1
 		
