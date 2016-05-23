@@ -14,6 +14,7 @@
     <file src="..\RDL\*.sql" target="Sql" />
 	<file src="..\RDL\*.ps1" target="Powershell" />
 	<file src="..\RDL\DLL\*.dll" target="DLL" />
+	<file src="*.*" target="OTHER" />
     <file src="..\RDL\Scripts\Dependencies\*.sql" target="Sql\Scripts\Dependencies" />
   </files>
 </package>
