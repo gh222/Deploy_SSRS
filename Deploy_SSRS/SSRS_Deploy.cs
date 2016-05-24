@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Deploy_SSRS.ReportingServices2010;
 using System.IO;
 using System.Web.Services.Protocols;
+using System.Configuration;
 
 namespace Deploy_SSRS
 {
@@ -17,7 +18,7 @@ namespace Deploy_SSRS
         string[] List_Of_Reports;
         public string FileSystemPath = @"E:\Reports\";
         public string SSRSWebServiceUrl = @"http://NIBS/ReportServer/ReportService2010.asmx?wsdl";
-        public string SSRSFolder = @"Coast";
+        public string SSRSFolder = ConfigurationManager.AppSettings["SSRS_Folder"];
         public string SSRSDataSource; // = SSRSFolder + @"_DataSource";
         DataSourceDefinition Definition;
     
@@ -27,12 +28,10 @@ namespace Deploy_SSRS
            if(Validate_Parameters())
             {
                 Initialize_webservice_proxy();
-               // CreateSSRSFolder();
+                CreateSSRSFolder();
               //  CreateDataSource("IPA");
               //  Upload_Reports();
-
-
-              
+            
             }
         
         }
@@ -75,7 +74,7 @@ namespace Deploy_SSRS
             return false;
         }
 
-        #region Create_Folder_n_DataSource
+   //     #region Create_Folder_n_DataSource
         public void CreateSSRSFolder()
         {
             string directory = @"";
@@ -86,122 +85,122 @@ namespace Deploy_SSRS
             }
             Console.WriteLine("Folder Exists => " + SSRSFolder);
         }
-        public void CreateDataSource()
-        {
-            Definition = new DataSourceDefinition();
-            Definition.CredentialRetrieval = CredentialRetrievalEnum.Store;
-            Definition.ConnectString = "data source=NIBS;initial catalog=Books";
-            Definition.Enabled = true;
-            Definition.UserName = "GH";
-            Definition.Password = "GH";
-            Definition.EnabledSpecified = false;
-            Definition.Extension = "SQL";
-            Definition.ImpersonateUserSpecified = false;
-            Definition.Prompt = null;
-            Definition.WindowsCredentials = false;
-
-            Deploy_SSRS.ReportingServices2010.Property[] properties = new Deploy_SSRS.ReportingServices2010.Property[1];
-            Deploy_SSRS.ReportingServices2010.Property p = new Deploy_SSRS.ReportingServices2010.Property();
-            p.Name = "Hidden"; p.Value = "true";
-            properties[0] = p;
-
-            bool IsFolderThere = CheckIfReportExists(SSRSFolder, "/",false);
-            if (IsFolderThere)
-            {
-                rs.CreateDataSource(SSRSDataSource, "/" + SSRSFolder, true, Definition, properties);
-                Console.WriteLine("Data Source Created => " + SSRSDataSource);
-            }
-            else {
-                Console.WriteLine("Data Source NOT Created as no Folder => " + SSRSFolder);
-            }
-
-
-
-
-
-            //string directory = @"";
-            // bool folderExists = CheckIfReportExists(SSRSFolder, directory);
-            //  if (!folderExists)
-            //  {
-            //      rs.CreateFolder(SSRSFolder, @"/", null);
-            //Console.WriteLine(connection);
-            //  }
-            //  Console.WriteLine("Folder Exists => " + SSRSFolder);
-        }
-        #endregion
-
-        #region Reports_Upload
-        //public void Upload_Reports()
+        //public void CreateDataSource()
         //{
-        //    Get_Reports();
-        //    DeleteReport();
-        //    PublishReport();
+        //    Definition = new DataSourceDefinition();
+        //    Definition.CredentialRetrieval = CredentialRetrievalEnum.Store;
+        //    Definition.ConnectString = "data source=NIBS;initial catalog=Books";
+        //    Definition.Enabled = true;
+        //    Definition.UserName = "GH";
+        //    Definition.Password = "GH";
+        //    Definition.EnabledSpecified = false;
+        //    Definition.Extension = "SQL";
+        //    Definition.ImpersonateUserSpecified = false;
+        //    Definition.Prompt = null;
+        //    Definition.WindowsCredentials = false;
+
+        //    Deploy_SSRS.ReportingServices2010.Property[] properties = new Deploy_SSRS.ReportingServices2010.Property[1];
+        //    Deploy_SSRS.ReportingServices2010.Property p = new Deploy_SSRS.ReportingServices2010.Property();
+        //    p.Name = "Hidden"; p.Value = "true";
+        //    properties[0] = p;
+
+        //    bool IsFolderThere = CheckIfReportExists(SSRSFolder, "/",false);
+        //    if (IsFolderThere)
+        //    {
+        //        rs.CreateDataSource(SSRSDataSource, "/" + SSRSFolder, true, Definition, properties);
+        //        Console.WriteLine("Data Source Created => " + SSRSDataSource);
+        //    }
+        //    else {
+        //        Console.WriteLine("Data Source NOT Created as no Folder => " + SSRSFolder);
+        //    }
+
+
+
+
+
+        //    //string directory = @"";
+        //    // bool folderExists = CheckIfReportExists(SSRSFolder, directory);
+        //    //  if (!folderExists)
+        //    //  {
+        //    //      rs.CreateFolder(SSRSFolder, @"/", null);
+        //    //Console.WriteLine(connection);
+        //    //  }
+        //    //  Console.WriteLine("Folder Exists => " + SSRSFolder);
         //}
+        //#endregion
 
-        //private void Get_Reports()
-        //{
-        //    List_Of_Reports = Directory.GetFiles(FileSystemPath, "*.rdl"); //.Where(item => item.Contains("rdl") == true);
-        //}
-        //private void DeleteReport()
-        //{
-        //    CatalogItem[] items = rs.ListChildren(@"/"+ SSRSFolder, true);
-        //    foreach (CatalogItem g in items)
-        //        {
+        //#region Reports_Upload
+        ////public void Upload_Reports()
+        ////{
+        ////    Get_Reports();
+        ////    DeleteReport();
+        ////    PublishReport();
+        ////}
+
+        ////private void Get_Reports()
+        ////{
+        ////    List_Of_Reports = Directory.GetFiles(FileSystemPath, "*.rdl"); //.Where(item => item.Contains("rdl") == true);
+        ////}
+        ////private void DeleteReport()
+        ////{
+        ////    CatalogItem[] items = rs.ListChildren(@"/"+ SSRSFolder, true);
+        ////    foreach (CatalogItem g in items)
+        ////        {
                 
-        //        if(g.TypeName != "DataSource")
-        //        {
-        //            rs.DeleteItem(@"/" + SSRSFolder + @"/" + g.Name);
-        //            Console.WriteLine(@"Deleted => /" + SSRSFolder + @"/" + g.Name);
-        //        }
+        ////        if(g.TypeName != "DataSource")
+        ////        {
+        ////            rs.DeleteItem(@"/" + SSRSFolder + @"/" + g.Name);
+        ////            Console.WriteLine(@"Deleted => /" + SSRSFolder + @"/" + g.Name);
+        ////        }
      
-        //    }
+        ////    }
 
-        //}
+        ////}
 
-        //private void PublishReport()
-        //{
-        //    DataSource[] sourcs = Report_DataSource();
-        //    Warning[] warnings= null;
-        //    FileInfo fileInfo;
-        //    byte[] fileContents;
+        ////private void PublishReport()
+        ////{
+        ////    DataSource[] sourcs = Report_DataSource();
+        ////    Warning[] warnings= null;
+        ////    FileInfo fileInfo;
+        ////    byte[] fileContents;
 
-        //    foreach (string s in List_Of_Reports)
-        //    {
-        //       fileInfo = new FileInfo(s);
-        //       fileNameWithoutExtension = Path.GetFileNameWithoutExtension(s);
-        //       fileContents = File.ReadAllBytes(fileInfo.FullName);
-        //       rs.CreateCatalogItem("Report", fileNameWithoutExtension, @"/" + SSRSFolder, true, fileContents, null, out warnings);
-        //     //   Report_DataSource(@"/" + SSRSFolder +@"/"+fileNameWithoutExtension);
-        //    }
-        //    if(warnings == null)
-        //    {
-        //        Console.WriteLine("Report Uploaded => " + fileNameWithoutExtension);
-        //    }
-        //        if (warnings != null)
-        //    {
-        //        foreach (Warning warning in warnings)
-        //        {
-        //            Console.WriteLine(warning);
-        //        }
-        //   }
+        ////    foreach (string s in List_Of_Reports)
+        ////    {
+        ////       fileInfo = new FileInfo(s);
+        ////       fileNameWithoutExtension = Path.GetFileNameWithoutExtension(s);
+        ////       fileContents = File.ReadAllBytes(fileInfo.FullName);
+        ////       rs.CreateCatalogItem("Report", fileNameWithoutExtension, @"/" + SSRSFolder, true, fileContents, null, out warnings);
+        ////     //   Report_DataSource(@"/" + SSRSFolder +@"/"+fileNameWithoutExtension);
+        ////    }
+        ////    if(warnings == null)
+        ////    {
+        ////        Console.WriteLine("Report Uploaded => " + fileNameWithoutExtension);
+        ////    }
+        ////        if (warnings != null)
+        ////    {
+        ////        foreach (Warning warning in warnings)
+        ////        {
+        ////            Console.WriteLine(warning);
+        ////        }
+        ////   }
 
-        //}
+        ////}
 
-        //private DataSource[] Report_DataSource()
-        //{
-        //    //DataSourceReference reference = new DataSourceReference();
-        //    DataSource[] sources; = new DataSource[1];
-        //    DataSource s = new DataSource();
-        //    s.Item = Definition;
-        //    s.Name = "Temp_DataSource";
-        //    sources[0] = s;
-        //  //  Console.WriteLine(rdl);
-        //    //rs.SetItemDataSources(rdl, sources);
-        //    return sources;
+        ////private DataSource[] Report_DataSource()
+        ////{
+        ////    //DataSourceReference reference = new DataSourceReference();
+        ////    DataSource[] sources; = new DataSource[1];
+        ////    DataSource s = new DataSource();
+        ////    s.Item = Definition;
+        ////    s.Name = "Temp_DataSource";
+        ////    sources[0] = s;
+        ////  //  Console.WriteLine(rdl);
+        ////    //rs.SetItemDataSources(rdl, sources);
+        ////    return sources;
 
-        //}
+        ////}
 
-        #endregion
+        //#endregion
 
     }
 }

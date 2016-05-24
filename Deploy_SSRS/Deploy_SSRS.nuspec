@@ -14,7 +14,8 @@
     <file src="..\RDL\*.sql" target="Sql" />
 	<file src="..\RDL\*.ps1" target="Powershell" />
 	<file src="..\RDL\DLL\*.dll" target="DLL" />
-	<file src="..\Deploy_SSRS\bin\Release\*.*" target="" />
+	<file src="..\Deploy_SSRS\bin\Release\Deploy_SSRS.exe" target="" />
+	<file src="..\Deploy_SSRS\bin\Release\Deploy_SSRS.exe.config" target="" />
     <file src="..\RDL\Scripts\Dependencies\*.sql" target="Sql\Scripts\Dependencies" />
   </files>
 </package>
