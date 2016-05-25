@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Subreport Name="Subreport1">
+        <ReportName>ACT0322_sub</ReportName>
+        <Parameters>
+          <Parameter Name="InputContractId">
+            <Value>=Parameters!contractid.Value</Value>
+          </Parameter>
+          <Parameter Name="InputPeriodId">
+            <Value>=Parameters!PeriodId.Value</Value>
+          </Parameter>
+        </Parameters>
+        <Height>1.64583in</Height>
+        <Width>2.28125in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Subreport>
+      <Subreport Name="Subreport3">
+        <ReportName>ACT0322_sub_summary</ReportName>
+        <Parameters>
+          <Parameter Name="InputContractId">
+            <Value>=Parameters!contractid.Value</Value>
+          </Parameter>
+          <Parameter Name="InputPeriodId">
+            <Value>=Parameters!PeriodId.Value</Value>
+          </Parameter>
+        </Parameters>
+        <Top>1.64583in</Top>
+        <Height>1.55208in</Height>
+        <Width>2.28125in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Subreport>
+    </ReportItems>
+    <Height>3.19792in</Height>
+    <Style />
+  </Body>
+  <Width>3.49875in</Width>
+  <Page>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>15in</PageWidth>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
+    <Style />
+  </Page>
+  <Description>ACT0322: Royalty Statement &amp; Summary (ITD)</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Temp_DataSource">
+      <DataSourceReference>Temp_DataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>e0365db3-2e24-4112-b859-234073e71e61</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Period">
+      <Query>
+        <DataSourceName>Temp_DataSource</DataSourceName>
+        <CommandText>SELECT Period_sid , period_id 
+from x_period
+where period_ending_date &gt; (GETDATE()-365*2) AND period_ending_date &lt; (GETDATE()+90)
+ order by period_ending_date</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Period_sid">
+          <DataField>Period_sid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="period_id">
+          <DataField>period_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="contractid">
+      <DataType>String</DataType>
+      <Prompt>Contract Id</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PeriodId">
+      <DataType>String</DataType>
+      <Prompt>Period</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Period</DataSetName>
+          <ValueField>period_id</ValueField>
+          <LabelField>period_id</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Approved">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Approved</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>Yes</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>0</Value>
+            <Label>No</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="BBC_Logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>en-GB</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>3e372329-7a85-44de-bdd3-20dc2619fa7c</rd:ReportID>
+</Report>

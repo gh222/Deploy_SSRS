@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Temp_DataSource">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=WGB01DB1052;Initial Catalog=bbc_ipa_production</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>7c3a482f-3e0a-4fcc-ae51-884e63a82eb1</DataSourceID>
+</RptDataSource>

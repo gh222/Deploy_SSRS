@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Test</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.02702cm</Top>
+        <Left>0.075cm</Left>
+        <Height>0.36in</Height>
+        <Width>30in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ShowAdvanced">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Show Advanced       </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Show_Advanced_Options.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.10292in</Top>
+        <Left>0.87375in</Left>
+        <Height>0.25in</Height>
+        <Width>4.86458in</Width>
+        <ZIndex>1</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(InStr(Join(Parameters!Show_Advanced_Options.Value,”,”),”Standard“)=0,True,False)</Hidden>
+          <ToggleItem>ShowAdvanced</ToggleItem>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="HideThis">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>This should hide</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.93625in</Top>
+        <Left>0.78in</Left>
+        <Height>0.25in</Height>
+        <Width>4.1875in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>6.04in</Height>
+    <Style />
+  </Body>
+  <Width>38.02953in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <Description>Contract UDF's &amp; Scope</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Temp_DataSource">
+      <DataSourceReference>Temp_DataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>5baa4d82-8109-45a7-b47b-92667594717f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="UDF_Names">
+      <Query>
+        <DataSourceName>Temp_DataSource</DataSourceName>
+        <CommandText>
+	IF OBJECT_ID('tempdb..#udf_Possible_To_Select') IS NOT NULL DROP TABLE #udf_Possible_To_Select
+	CREATE TABLE #udf_Possible_To_Select (UDF_Name nvarchar(60) )
+	INSERT INTO #udf_Possible_To_Select (UDF_Name)
+	select DISTINCT REPLACE(REPLACE(label_id,'''',''),'`','') as UDF_Name from c_udf --where label_ID LIKE '%art%'
+	where udf_sid IN (4,5,7,13,35,36,42,75,76,82,85,98,99,102,104,106,111,112,113,131,139,140,176,180,186,199,200,201,202,203,204,205,206,207,208,209,210,211,212,215,217,1968681879,1968681881,1968681882,1968681883,1968681885,1968681887,1968681890,1968681891,1968681892,1968681893,1968681894,1968681898,1968681907,1968681909,1968681910,1968681914,1968681915,1968681916,215,115,138,209,175,75,1968681908,201,181,109,1968681885,1968681879,146,152,1968681871,212,32,1968681891,35,106,1968681882,1968681888,135,112,98,113,184,1968681894,81,1968681906,64,1968681883,1968681914,207,1968681877,7,150,70,141,210,176,84,204,110,61,104,4,147,1968681874,211,188,1968681892,1968681898,36,205,1968681881,85,13,42,5,199,1968681869,99,139,128,76,202,108,82,182,88,1968681909,208,102,1968681915,1968681872,1968681873,140,186,1968681890,217,203,1968681887,1968681910,111,103,1968681916,114,1968681893,174,131,180,206,1968681907,1968681884,8,1968681870,151,200)
+
+	UPDATE #udf_Possible_To_Select 
+	SET UDF_Name = REPLACE(UDF_Name,'%','_Percentage_')
+	from #udf_Possible_To_Select where LEFT(UDF_Name,1) = '%'
+
+	INSERT INTO #udf_Possible_To_Select (UDF_Name)
+				select '_Artist_Shares' as UDF_Name
+	UNION ALL	select '_Artist_Share_Next' as UDF_Name
+	UNION ALL	select '_Recipient' as UDF_Name
+	UNION ALL	select '_Template_Group_Default' as UDF_Name
+	UNION ALL	select '_Template_Group_Advance' as UDF_Name
+	UNION ALL	select '_Template_Group_Accruals' as UDF_Name
+	UNION ALL	select '_Template_Group_Accruals_39' as UDF_Name
+	UNION ALL	select '_Template_Group_Statements' as UDF_Name
+	UNION ALL	select '_All' as UDF_Name
+	UNION ALL	select '_Scope' as UDF_Name
+	UNION ALL	select '_Scope_Next_Rights' as UDF_Name
+	UNION ALL	select '_Product_Share_Not_Available' as UDF_Name
+	UNION ALL	select '_Product_Share_Next' as UDF_Name
+	UNION ALL	select '_Status' as UDF_Name
+	UNION ALL	select '_Buyout_Expiration_Date' as UDF_Name
+	UNION ALL	select '_Statement_Schedule' as UDF_Name
+	UNION ALL	select '_Section_Group' as UDF_Name
+	
+		select UDF_Name	from #udf_Possible_To_Select ORDER BY CASE WHEN UDF_Name LIKE '_All' THEN '0' WHEN LEFT(UDF_Name,1) = '_' THEN '1'	 ELSE UDF_Name END ASC</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="UDF_Name">
+          <DataField>UDF_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="Show_Advanced_Options">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Standard</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Show_Advanced_Options</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>Standard</Value>
+            <Label>Standard</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Show_Advanced_Options</Value>
+            <Label>Show_Advanced_Options</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Direct_Input_Inclusion_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Use Inclusion File</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>No</Value>
+            <Label>No</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Contract</Value>
+            <Label>Yes_Contract - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0348_Inclusion.txt</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Contributor_ID</Value>
+            <Label>Yes_Contributor_ID - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0348_Inclusion.txt</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Product_Scope</Value>
+            <Label>Yes_Product_Scope -\Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0348_Inclusion.txt</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>b852bcaf-9712-4e53-a1a9-0c843f3eaf9d</rd:ReportID>
+</Report>

@@ -1,0 +1,1592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ACT0032 - </Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=iif(InStr(Globals!ReportServerUrl,"sqlreports2008-")&gt;0,"TEST","LIVE") &amp; " "</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Switch(
+InStr(Globals!ReportFolder,"Multimedia") &gt; 0, "Multimedia"
+,InStr(Globals!ReportFolder,"Music") &gt; 0, "Music"
+,InStr(Globals!ReportFolder,"Video") &gt; 0, "Video"
+,InStr(Globals!ReportFolder,"Books") &gt; 0, "Books"
+,InStr(Globals!ReportFolder,"NewMedia") &gt; 0, "NewMedia"
+,InStr(Globals!ReportFolder,"IPA") &gt; 0, "IPA"
+,InStr(Globals!ReportFolder,"Audio") &gt; 0, "Audio"
+,1=1, "Unknown Layer")
+</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Height>0.36in</Height>
+        <Width>8.27083in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Balance Carried Forward (query 17)</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.36in</Top>
+        <Height>0.3in</Height>
+        <Width>4.7218in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Approved: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Switch(Parameters!approved.Value = 1,"Yes"
+		,1=1,"No")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Top>1.06in</Top>
+        <Height>0.2in</Height>
+        <Width>4.7218in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>to: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!inputenddate.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <Top>0.86in</Top>
+        <Height>0.2in</Height>
+        <Width>4.7218in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Royalty Period from: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!inputstartdate.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>0.66in</Top>
+        <Height>0.2in</Height>
+        <Width>4.7218in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.17278in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.54903in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.54903in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25521in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox7">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract ID</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox9">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox8">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contact ID</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox10">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contact</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox12">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Currency</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox34">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox34</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox11">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Amount</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24479in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="contract_id">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!contract_id.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>contract_id</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="contract">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!contract.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>contract</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="contact_id">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!contact_id.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>contact_id</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="formatted_name">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!formatted_name.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>formatted_name</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="currency">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!currency.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>currency</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox35">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Total:</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox35</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="amount">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!amount.Value</Value>
+                              <Style>
+                                <Format>0.00</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>amount</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox27">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox27</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox28">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox29">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox30">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox37">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox32">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Report Total:</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox32</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox33">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!amount.Value)</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>0.00</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox33</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+            <TablixMember>
+              <KeepWithGroup>Before</KeepWithGroup>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.41542in</Top>
+        <Height>0.75in</Height>
+        <Width>10.27084in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>2.32334in</Height>
+    <Style />
+  </Body>
+  <Width>10.27084in</Width>
+  <Page>
+    <PageFooter>
+      <Height>0.6in</Height>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox3">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ReportServerUrl</Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value> Report Name: </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!ReportName</Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>, Time Stamp: </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime</Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>, Run By: </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=User!UserID</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.22556in</Top>
+          <Height>0.25in</Height>
+          <Width>8.27083in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>15in</PageWidth>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <Description>Balance Carried Forward (query 17)</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Temp_DataSource">
+      <DataSourceReference>Temp_DataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>ed4eb6db-f979-4805-b23d-787e13fac98e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>Temp_DataSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@inputstartdate">
+            <Value>=Parameters!inputstartdate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@inputenddate">
+            <Value>=Parameters!inputenddate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@media">
+            <Value>=Parameters!media.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@approved">
+            <Value>=Parameters!approved.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>declare @startdate datetime
+declare @enddate datetime
+
+set @startdate = @inputstartdate
+set @enddate = @inputenddate
+
+--add a minute to the start period so that we don't return the previous period
+set @startdate = dateadd(n,1,@startdate)
+
+if @enddate is null set @enddate =  '3000-01-01 00:00:00.000'
+if @enddate= '' set @enddate =   '3000-01-01 00:00:00.000'
+
+if @startdate is null set @startdate =  '1900-01-01 00:00:00.000'
+if @startdate= '' set @startdate =   '1900-01-01 00:00:00.000'
+
+
+
+create table #approval(
+	group_sid sid,
+	descr nvarchar(100)
+)
+insert into #approval select approval_group_sid, descr  from c_approval_group where descr in ('Statements','Subrights')
+
+create table #accounts(
+	account_sid sid
+)
+
+if @media = 'IPA' or @media='PPO'
+begin
+	insert into #accounts values(530)
+end
+else
+begin
+	insert into #accounts values(89)
+	insert into #accounts values(390)
+end
+
+select period_sid 
+into #periods
+from x_period
+where period_ending_date between @startdate and @enddate
+
+/*
+86	FINAL NEG EARNINGS BALANCE	Final Negative Earnings Balance	
+89	PAYMENT AMT TO BE CF	Payment Amount To Be Carried Forward
+105	FINAL ADVANCE BALANCE	Final Advance Balance
+116	PAYMENT DUE - FINAL	Payment Due - Final
+432	STMT SUM - CARRIED FWD	Statement Summary - Carried Forward	
+476	FIXER FEE TO BE CF	Fixer Fee To Be Carried Forward
+*/
+
+declare @rtn_code int
+set @rtn_code = 0
+
+
+create table #results(
+	approval_group descr,
+	contract_id id,
+	contract descr,
+	contact_id id null,
+	formatted_name varchar(255), 
+	product_id id ,
+	product descr,
+	udkey_2_sid sid,
+	account_id id,
+	udkey_10_sid sid,
+	currency descr,
+	amount hc_amt
+)
+
+--select * from x_period order by period_id
+if @approved = 1
+begin
+	insert into #results
+	select	a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id as product_id,
+			cu1.descr as product,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id as account,
+			xdcr.udkey_10_sid,
+			cu10.descr as currency,
+			sum(xdcr.amount) as amount
+	from	x_contract xc
+	inner join x_deal xd						on xd.contract_sid = xc.contract_sid
+	inner join x_deal_calc_result xdcr			on xdcr.deal_sid = xd.deal_sid 
+	inner join #periods xp						on xp.period_sid = xdcr.period_sid
+	inner join #accounts cu2list				on cu2list.account_sid = xdcr.udkey_2_sid
+	inner join #approval a						ON a.group_sid = xd.approval_group_sid
+	inner join x_template_job_queue_hist tjq	ON xdcr.deal_sid = tjq.deal_sid	
+	left join x_contract_participant xcp		on xcp.contract_sid = xc.contract_sid and xcp.contact_sid = xdcr.user_contact_sid
+	left join c_contact cc						on cc.contact_sid = xcp.contact_sid
+	left join c_udkey_1 cu1						ON cu1.udkey_1_sid = xdcr.udkey_1_sid
+	left join c_udkey_2 cu2						ON cu2.udkey_2_sid = xdcr.udkey_2_sid
+	left join c_udkey_10 cu10					ON cu10.udkey_10_sid = xdcr.udkey_10_sid
+	where	xdcr.udkey_3_sid = 2
+	and		xdcr.period_sid = tjq.processing_cutoff_period_sid
+	and		tjq.calc_order_nbr = 1
+	group by a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id,
+			cu1.descr,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id,
+			xdcr.udkey_10_sid,
+			cu10.descr
+end
+else
+begin
+	insert into #results
+	select	a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id as product_id,
+			cu1.descr as product,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id as account,
+			xdcr.udkey_10_sid,
+			cu10.descr as currency,
+			sum(xdcr.amount) as amount
+	from	x_contract xc
+	inner join x_deal xd						on xd.contract_sid = xc.contract_sid
+	inner join x_deal_calc_result xdcr			on xdcr.deal_sid = xd.deal_sid
+	inner join #periods xp						on xp.period_sid = xdcr.period_sid
+	inner join #accounts cu2list				on cu2list.account_sid = xdcr.udkey_2_sid
+	inner join #approval a						ON a.group_sid = xd.approval_group_sid
+	inner join x_template_job_queue tjq			ON xdcr.deal_sid = tjq.deal_sid	
+	left join x_contract_participant xcp		on xcp.contract_sid = xc.contract_sid and xcp.contact_sid = xdcr.user_contact_sid
+	left join c_contact cc						on cc.contact_sid = xcp.contact_sid
+	left join c_udkey_1 cu1						ON cu1.udkey_1_sid = xdcr.udkey_1_sid
+	left join c_udkey_2 cu2						ON cu2.udkey_2_sid = xdcr.udkey_2_sid
+	left join c_udkey_10 cu10					ON cu10.udkey_10_sid = xdcr.udkey_10_sid
+	where	xdcr.udkey_3_sid = 2
+	and		xdcr.period_sid = tjq.processing_cutoff_period_sid
+	and		tjq.calc_order_nbr = 1
+	group by a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id,
+			cu1.descr,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id,
+			xdcr.udkey_10_sid,
+			cu10.descr
+end
+if @@error &lt;&gt; 0 set @rtn_code = 1
+--select * from #results
+
+-- get final advance balance account
+if @rtn_code = 0 and @media &lt;&gt; 'IPA' and  @media &lt;&gt;'PPO'
+begin
+	if @approved = 1
+	begin
+		insert into #results
+		select	a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id as product_id,
+			cu1.descr as product,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id as account,
+			xdcr.udkey_10_sid,
+			cu10.descr as currency,
+			sum(xdcr.amount) as amount
+		from	x_contract xc
+		inner join	x_deal xd							on xd.contract_sid = xc.contract_sid
+		inner join	x_deal_calc_result xdcr				on xdcr.deal_sid = xd.deal_sid
+		inner join	#periods xp							on xp.period_sid = xdcr.period_sid
+		inner join	#accounts cu2list					on cu2list.account_sid = xdcr.udkey_2_sid
+		inner join	#approval a							ON a.group_sid = xd.approval_group_sid
+		inner join	x_template_job_queue_hist tjq			ON xdcr.deal_sid = tjq.deal_sid	
+		left join	x_contract_participant xcp			on xcp.contract_sid = xc.contract_sid and xcp.contact_sid = xdcr.user_contact_sid
+		left join	c_contact cc						on cc.contact_sid = xcp.contact_sid
+		left join	c_udkey_1 cu1						ON cu1.udkey_1_sid = xdcr.udkey_1_sid
+		left join	c_udkey_2 cu2						ON cu2.udkey_2_sid = xdcr.udkey_2_sid
+		left join	c_udkey_10 cu10						ON cu10.udkey_10_sid = xdcr.udkey_10_sid
+		where 	xdcr.udkey_2_sid = 105 -- PAYMENT AMT TO BE CF
+		and		xdcr.udkey_3_sid = 2 -- ITD
+		and		xdcr.period_sid = tjq.processing_cutoff_period_sid
+		and		tjq.calc_order_nbr = 1
+		group by a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id,
+			cu1.descr,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id,
+			xdcr.udkey_10_sid,
+			cu10.descr
+	end
+	else
+	begin
+		insert into #results
+		select	a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id as product_id,
+			cu1.descr as product,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id as account,
+			xdcr.udkey_10_sid,
+			cu10.descr as currency,
+			sum(xdcr.amount) as amount
+		from	x_contract xc
+		inner join	x_deal xd							on xd.contract_sid = xc.contract_sid
+		inner join	x_deal_calc_result xdcr				on xdcr.deal_sid = xd.deal_sid
+		inner join	#periods xp							on xp.period_sid = xdcr.period_sid
+		inner join	#accounts cu2list					on cu2list.account_sid = xdcr.udkey_2_sid
+		inner join	#approval a							ON a.group_sid = xd.approval_group_sid
+		inner join	x_template_job_queue tjq			ON xdcr.deal_sid = tjq.deal_sid	
+		left join	x_contract_participant xcp			on xcp.contract_sid = xc.contract_sid and xcp.contact_sid = xdcr.user_contact_sid
+		left join	c_contact cc						on cc.contact_sid = xcp.contact_sid
+		left join	c_udkey_1 cu1						ON cu1.udkey_1_sid = xdcr.udkey_1_sid
+		left join	c_udkey_2 cu2						ON cu2.udkey_2_sid = xdcr.udkey_2_sid
+		left join	c_udkey_10 cu10						ON cu10.udkey_10_sid = xdcr.udkey_10_sid
+		where 	xdcr.udkey_2_sid = 105 -- PAYMENT AMT TO BE CF
+		and		xdcr.udkey_3_sid = 2 -- ITD
+		and		xdcr.period_sid = tjq.processing_cutoff_period_sid
+		and		tjq.calc_order_nbr = 1
+		group by a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id,
+			cu1.descr,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id,
+			xdcr.udkey_10_sid,
+			cu10.descr
+	end
+	
+	if @@error &lt;&gt; 0 set @rtn_code = 2 
+end
+
+
+
+
+-- get fixer fee to be carried forward
+if @rtn_code = 0
+begin
+	if @approved = 1
+	begin
+		insert into #results
+		select	a.descr,
+				xc.contract_id,
+				xc.descr,
+				cc.contact_id,
+				cc.formatted_name,
+				cu1.udkey_1_id as product_id,
+				cu1.descr as product,
+				xdcr.udkey_2_sid,
+				cu2.udkey_2_id as account,
+				xdcr.udkey_10_sid,
+				cu10.descr as currency,
+				sum(xdcr.amount) as amount
+		from	x_contract xc
+		inner join	x_deal xd							on xd.contract_sid = xc.contract_sid
+		inner join	x_deal_calc_result xdcr				on xdcr.deal_sid = xd.deal_sid
+		inner join	#periods xp							on xp.period_sid = xdcr.period_sid
+		inner join	#accounts cu2list					on cu2list.account_sid = xdcr.udkey_2_sid
+		inner join	#approval a							ON a.group_sid = xd.approval_group_sid
+		inner join	x_template_job_queue_hist tjq			ON xdcr.deal_sid = tjq.deal_sid	
+		left join	x_contract_participant xcp			on xcp.contract_sid = xc.contract_sid and xcp.contact_sid = xdcr.user_contact_sid
+		left join	c_contact cc						on cc.contact_sid = xcp.contact_sid
+		left join	c_udkey_1 cu1						ON cu1.udkey_1_sid = xdcr.udkey_1_sid
+		left join	c_udkey_2 cu2						ON cu2.udkey_2_sid = xdcr.udkey_2_sid
+		left join	c_udkey_10 cu10						ON cu10.udkey_10_sid = xdcr.udkey_10_sid
+		where 	xdcr.udkey_2_sid = 476  -- FIXER FEE TO BE CF
+		and		xdcr.udkey_3_sid = 2  -- ITD
+		and		xdcr.udkey_1_sid = 116 -- FIXER FEE
+		and		xdcr.period_sid = tjq.processing_cutoff_period_sid	
+		and		tjq.calc_order_nbr = 1
+		group by a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id,
+			cu1.descr,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id,
+			xdcr.udkey_10_sid,
+			cu10.descr
+	end
+	else
+	begin
+		insert into #results
+		select	a.descr,
+				xc.contract_id,
+				xc.descr,
+				cc.contact_id,
+				cc.formatted_name,
+				cu1.udkey_1_id as product_id,
+				cu1.descr as product,
+				xdcr.udkey_2_sid,
+				cu2.udkey_2_id as account,
+				xdcr.udkey_10_sid,
+				cu10.descr as currency,
+				sum(xdcr.amount) as amount
+		from	x_contract xc
+		inner join	x_deal xd							on xd.contract_sid = xc.contract_sid
+		inner join	x_deal_calc_result xdcr				on xdcr.deal_sid = xd.deal_sid
+		inner join	#periods xp							on xp.period_sid = xdcr.period_sid
+		inner join	#accounts cu2list					on cu2list.account_sid = xdcr.udkey_2_sid
+		inner join	#approval a							ON a.group_sid = xd.approval_group_sid
+		inner join	x_template_job_queue tjq			ON xdcr.deal_sid = tjq.deal_sid	
+		left join	x_contract_participant xcp			on xcp.contract_sid = xc.contract_sid and xcp.contact_sid = xdcr.user_contact_sid
+		left join	c_contact cc						on cc.contact_sid = xcp.contact_sid
+		left join	c_udkey_1 cu1						ON cu1.udkey_1_sid = xdcr.udkey_1_sid
+		left join	c_udkey_2 cu2						ON cu2.udkey_2_sid = xdcr.udkey_2_sid
+		left join	c_udkey_10 cu10						ON cu10.udkey_10_sid = xdcr.udkey_10_sid
+		where 	xdcr.udkey_2_sid = 476  -- FIXER FEE TO BE CF
+		and		xdcr.udkey_3_sid = 2  -- ITD
+		and		xdcr.udkey_1_sid = 116 -- FIXER FEE
+		and		xdcr.period_sid = tjq.processing_cutoff_period_sid	
+		and		tjq.calc_order_nbr = 1
+		group by a.descr,
+			xc.contract_id,
+			xc.descr,
+			cc.contact_id,
+			cc.formatted_name,
+			cu1.udkey_1_id,
+			cu1.descr,
+			xdcr.udkey_2_sid,
+			cu2.udkey_2_id,
+			xdcr.udkey_10_sid,
+			cu10.descr
+	end
+
+	if @@error &lt;&gt; 0 set @rtn_code = 2 
+end
+--7219
+update #results
+set contact_id =	cc.contact_id 
+					from	#results r
+					inner join x_contract xc on r.contract_id = xc.contract_id
+					inner join x_contract_participant xcp on xcp.contract_sid = xc.contract_sid
+					inner join c_contact cc on cc.contact_sid = xcp.contact_sid
+					where r.contact_id is null
+					
+					
+update #results
+set formatted_name = cc.formatted_name
+					from	#results r
+					inner join x_contract xc on r.contract_id = xc.contract_id
+					inner join x_contract_participant xcp on xcp.contract_sid = xc.contract_sid
+					inner join c_contact cc on cc.contact_sid = xcp.contact_sid
+					where r.formatted_name is null
+					
+				
+				
+-- now sum together the two accounts 
+if @rtn_code = 0
+begin
+	select 	approval_group,
+		r.contract_id,
+		contract,
+		contact_id,
+		formatted_name, 
+--		product_id,
+--		product,
+		udkey_10_sid,
+		currency,
+		sum(amount) as amount
+	from #results r, x_contract c
+	where r.contract_id = c.contract_id
+	and c.contracT_sid = c.original_contract_sid
+	and c.status_code not in ('EXPIRED')
+	group by approval_group,
+		udkey_10_sid,		-- currency
+		currency,
+		r.contract_id,		-- contract
+		contract,
+		contact_id,		-- contact
+		formatted_name
+--		product_id,		-- product
+--		product
+	having sum(amount) != 0
+end
+
+drop table #results
+drop table #approval
+drop table #accounts
+drop table #periods</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="approval_group">
+          <DataField>approval_group</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contract_id">
+          <DataField>contract_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contract">
+          <DataField>contract</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contact_id">
+          <DataField>contact_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="formatted_name">
+          <DataField>formatted_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="udkey_10_sid">
+          <DataField>udkey_10_sid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="currency">
+          <DataField>currency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount">
+          <DataField>amount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PeriodStart">
+      <Query>
+        <DataSourceName>Temp_DataSource</DataSourceName>
+        <CommandText>SELECT   p1.period_id   ,
+ISNULL(p2.period_ending_date,'17530101') as 'PeriodStartDate' 
+FROM  x_period p1 
+LEFT JOIN x_period p2 ON p2.period_ending_date = (SELECT max(period_ending_date)	 
+FROM x_period 	 WHERE period_ending_date &lt; p1.period_ending_date) 
+ORDER   BY p1.period_ending_date</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="period_id">
+          <DataField>period_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PeriodStartDate">
+          <DataField>PeriodStartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PeriodEnd">
+      <Query>
+        <DataSourceName>Temp_DataSource</DataSourceName>
+        <CommandText>SELECT   p1.period_id   ,
+CONVERT(datetime,CONVERT(VARCHAR(24),period_ending_date, 102)+' 23:59:59') as 'PeriodEndDate'
+,period_sid FROM  x_period p1 ORDER   BY p1.period_ending_date</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="period_id">
+          <DataField>period_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PeriodEndDate">
+          <DataField>PeriodEndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="period_sid">
+          <DataField>period_sid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="inputstartdate">
+      <DataType>DateTime</DataType>
+      <Prompt>Include items where Royalty Period is later than or equal to:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="inputenddate">
+      <DataType>DateTime</DataType>
+      <Prompt>And where Royalty Period is earlier than or equal to:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="approved">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Approved</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>Yes</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>0</Value>
+            <Label>No</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="media">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Books</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt xml:space="preserve">
+      </Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>en-GB</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>95e0da3b-c675-4714-96fa-f7ab98108ad0</rd:ReportID>
+</Report>

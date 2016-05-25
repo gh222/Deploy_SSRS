@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ACT0061 - </Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=iif(InStr(Globals!ReportServerUrl,"sqlreports2008-")&gt;0,"TEST","LIVE") &amp; " "</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Switch(
+InStr(Globals!ReportFolder,"CRA") &gt; 0, "CRA"
+,InStr(Globals!ReportFolder,"IPA") &gt; 0, "IPA"
+,InStr(Globals!ReportFolder,"Audio") &gt; 0, "Audio"
+,1=1, "Unknown Layer")</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Height>0.36in</Height>
+        <Width>12.46875in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contract UDF Summary</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.36in</Top>
+        <Height>0.3in</Height>
+        <Width>5.86459in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>UDF =: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!InputUdf.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <Top>0.86in</Top>
+        <Height>0.2in</Height>
+        <Width>5.86459in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contract ID: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!InputContractId.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>0.66in</Top>
+        <Height>0.2in</Height>
+        <Width>5.86459in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Must enter either a Contract Id or Udf</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>1.08778in</Top>
+        <Height>0.25in</Height>
+        <Width>5.86459in</Width>
+        <ZIndex>4</ZIndex>
+        <Visibility>
+          <Hidden>=IIf(
+	Len(Parameters!InputContractId.Value) = 0, 
+	IIf(Len(Parameters!InputUdf.Value) = 0,false,true)
+	,true)</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix4">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>4.82894cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>10.06712cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5.41042cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>6.25708cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5.10707cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox43">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract ID</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox43</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox45">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Description</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox45</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox47">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Udf</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox47</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox49">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Name</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox49</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox51">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Value</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox51</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="ContractID">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ContractID.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>ContractID</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Description">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Description.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Description</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Udf">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Udf.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Udf</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Name">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Name.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Name</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Value">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Value.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Value</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>3.57435cm</Top>
+        <Height>1.2cm</Height>
+        <Width>31.67063cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox3">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Globals!ReportServerUrl</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> Report Name: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Globals!ReportName</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>, Time Stamp: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Globals!ExecutionTime</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>, Run By: </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=User!UserID</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.94911in</Top>
+        <Height>0.25in</Height>
+        <Width>12.46875in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>2.27327in</Height>
+    <Style />
+  </Body>
+  <Width>12.46875in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <Description>Contract UDF Summary</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <DataSourceReference>Temp_DataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>ec352cb2-d8cd-4cda-8171-466b821d76a7</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="udf">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT DISTINCT descr as value
+,descr as label FROM c_udf
+UNION
+SELECT 	'' as value
+	,'&lt;blank&gt;' as label</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="value">
+          <DataField>value</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="label">
+          <DataField>label</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@InputContractId">
+            <Value>=Parameters!InputContractId.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@InputUdf">
+            <Value>=Parameters!InputUdf.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SET QUOTED_IDENTIFIER OFF
+IF OBJECT_ID('tempdb..#results') IS NOT NULL  drop table #results
+
+declare		@xudf_sid sid,
+			@xfield_sid varchar(30),
+			@xfield_id id,
+			@dt_sid sid, 
+			@type_code code,
+			@sql varchar(500),
+			@contractid id,
+			@udfSid sid,
+			@udf varchar(1000),
+			@xtable varchar(1000)
+
+
+SET @contractid = @InputContractId
+SET @udf = @InputUdf
+
+--SET @contractid = 'WGBHED006'
+--SET @udf = ''
+
+
+if ((@contractid IS NULL OR @contractid = '') AND (@udf IS NULL OR @udf = ''))
+	GOTO NO_PARAMTERS
+
+if @udf is null set @udf = '%'
+if @udf ='' set @udf = '%'
+
+if @contractid is null set @contractid = '%'
+if @contractid = '' set @contractid = '%'
+
+DECLARE db_cursor CURSOR FORWARD_ONLY READ_ONLY   FOR  
+SELECT udf_sid, table_name,ct.typecast_id as typecast_code,lookup_token_col_name_or_sql, lookup_col_name_or_sql,cu.datatype_sid
+FROM c_udf cu
+INNER JOIN c_datatype cd ON cd.datatype_sid = cu.datatype_sid
+LEFT JOIN c_system_table st ON st.system_table_sid = cd.system_table_sid
+LEFT JOIN c_datatype_field fld ON fld.datatype_sid = cu.datatype_sid AND fld.seq_nbr=1
+LEFT JOIn c_typecast ct on ct.typecast_sid = cd.typecast_sid
+WHERE cu.descr like @udf
+AND cd.typecast_sid IN  (7,11,23)  --('ENUMERATED','ITEM','SID')
+
+
+
+
+
+CREATE TABLE #results(
+	contract_sid sid
+	,udf_sid sid
+	,value varchar(2000) null
+)
+OPEN db_cursor   
+FETCH NEXT FROM db_cursor INTO @udfSid ,@xtable,@type_code,@xfield_sid,@xfield_id,@dt_sid
+
+WHILE @@FETCH_STATUS = 0   
+BEGIN
+	set @sql = ''
+	PRINT "select  "+@xfield_id+" from "+@xtable+" x  where "+convert(varchar(12),@xfield_sid)+" = "--+convert(varchar(12),@xudf_value)
+	if @type_code = 'ENUMERATED'	   
+	BEGIN
+		PRINT '2: '+  CONVERT(VARCHAR,@udfSid)
+		set @sql = 'INSERT INTO #results SELECT xc.contract_sid,'+CONVERT(VARCHAR,@udfSid)+' as udf_sid,ref.descr as value FROM x_contract xc'
+		set @sql = @sql +' INNER JOIN x_contract_udf xcu ON xc.contract_sid = xcu.contract_sid AND xcu.udf_sid = '+CONVERT(VARCHAR,@udfSid)
+		set @sql = @sql +' LEFT JOIN '+@xtable+' ref ON ref.enumerated_sid = xcu.udf_value'
+		set @sql = @sql +' WHERE xc.contract_sid = xc.original_contract_sid'
+		set @sql = @sql +' AND xc.status_sid not in (6,18,38) ' --(''ARCHIVED'',''EXPIRED'',''PRIORREVISION'')'
+		set @sql = @sql +' AND xc.contract_id like '''+@contractid+''''
+	END	
+
+
+
+	if @type_code = 'ITEM'  
+	BEGIN
+		PRINT '1: '+  CONVERT(VARCHAR,@udfSid)
+		set @sql = 'INSERT INTO #results SELECT xc.contract_sid,'+CONVERT(VARCHAR,@udfSid)+' as udf_sid,ISNULL('+@xfield_id+',xcu.udf_value) as value FROM x_contract xc'
+		set @sql = @sql +' INNER JOIN x_contract_udf xcu ON xc.contract_sid = xcu.contract_sid AND xcu.udf_sid = '+CONVERT(VARCHAR,@udfSid)
+		set @sql = @sql +' LEFT JOIN '+@xtable+' ref ON ref.'+@xfield_sid+' = CASE WHEN ISNUMERIC(xcu.udf_value ) = 1 THEN xcu.udf_value  ELSE NULL END'
+		set @sql = @sql +' WHERE xc.contract_sid = xc.original_contract_sid'
+		set @sql = @sql +' AND xc.status_sid not in (6,18,38) ' --(''ARCHIVED'',''EXPIRED'',''PRIORREVISION'')'
+		set @sql = @sql +' AND xc.contract_id like '''+@contractid+''''
+	END
+	PRINT @sql
+	exec(@sql)
+
+    FETCH NEXT FROM db_cursor INTO @udfSid ,@xtable,@type_code,@xfield_sid,@xfield_id,@dt_sid
+END   
+
+CLOSE db_cursor   
+DEALLOCATE db_cursor
+
+
+INSERT INTO #results
+SELECT xc.contract_sid,xcu.udf_sid,xcu.udf_value
+FROM x_contract xc
+INNER JOIN x_contract_udf xcu ON xc.contract_sid = xcu.contract_sid
+INNER JOIN c_udf cu ON xcu.udf_sid = cu.udf_sid
+LEFT JOIN #results r ON xc.contract_sid = r.contract_sid AND cu.udf_sid = r.udf_sid
+WHERE xc.contract_sid = xc.original_contract_sid
+AND xc.status_sid not in (6,18,38)
+AND xc.contract_id like @contractid
+AND cu.descr like @udf
+AND r.contract_sid IS NULL
+OPTION(RECOMPILE)
+
+SELECT xc.contract_id as ContractID
+	,xc.descr as Description
+	,cu.descr as Udf
+	,cu.name as Name
+	,ISNULL(r.value,'') as Value
+FROM #results r
+INNER JOIN x_contract xc ON r.contract_sid = xc.contract_sid
+INNER JOIN c_udf cu ON r.udf_sid = cu.udf_sid
+ORDER BY xc.contract_id,cu.descr
+drop table #results
+
+GOTO COMPLETE
+
+NO_PARAMTERS:
+BEGIN
+	PRINT 'THROW NO PARAMETERS'
+END
+
+COMPLETE:</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ContractID">
+          <DataField>ContractID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Udf">
+          <DataField>Udf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Value">
+          <DataField>Value</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="InputContractId">
+      <DataType>String</DataType>
+      <Prompt>Input Contract Id</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InputUdf">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>UDF  (&lt;blank&gt; for all)</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>udf</DataSetName>
+          <ValueField>value</ValueField>
+          <LabelField>label</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>748187dd-b731-41b4-ba50-fe84976769ac</rd:ReportID>
+</Report>

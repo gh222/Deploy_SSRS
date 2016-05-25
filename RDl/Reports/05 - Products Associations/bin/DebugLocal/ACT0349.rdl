@@ -1,0 +1,3697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ACT0349 - Product &amp; Artist Share</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Height>0.41946in</Height>
+        <Width>4in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox55">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Product ID:           </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Product_ID_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>3.27115cm</Top>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox56">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contract ID:          </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Contract_ID_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>2.49475cm</Top>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox57">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Method:       </Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Output_Method_Input.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>1.52434cm</Top>
+        <Height>0.97042cm</Height>
+        <Width>4in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox58">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Keyword               </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Keyword_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>3.90643cm</Top>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox59">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Output To Folder - Extraction:         </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Direct_Output_CheckBox_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>0.97921cm</Top>
+        <Left>6in</Left>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox85">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Input From Folder - Inclusion List:    </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Direct_Input_Inclusion_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>1.64977cm</Top>
+        <Left>6in</Left>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox86">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Output To Folder - Exclusion List:    </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Direct_Input_Exclusion_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>2.32032cm</Top>
+        <Left>6in</Left>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox87">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>\\Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Extraction.txt</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>\\Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Inclusion.txt</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>\\Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Exclusion.txt</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>3.02615cm</Top>
+        <Left>6in</Left>
+        <Height>2.10813cm</Height>
+        <Width>7in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox88">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contributor_ID       </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Contributor_ID_Input.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>4.50643cm</Top>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox89">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contributor_Name </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!Contributor_Name_Input.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox55</rd:DefaultName>
+        <Top>5.10643cm</Top>
+        <Height>0.6cm</Height>
+        <Width>4in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.54cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.54cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>10.16cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.54cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.54cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5.08cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>7.62cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>12.7cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>12.7cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox122">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract ID</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox122</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox120">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract ID export</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox120</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox118">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract Description</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox118</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox116">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contract Status</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox116</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox114">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contribution Type</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox114</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox112">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Admin Class</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox112</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox110">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>PG</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox110</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox108">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Multi Particpant</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox108</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox106">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>keyword</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox106</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox104">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>x 1</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox104</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox102">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Artist Seq</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox102</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox100">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Artist Sort</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox100</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox98">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contributor ID</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox98</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox96">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Contributor Name</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox96</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox94">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Artist Share</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox94</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox92">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Artist Pot</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox92</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox84">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>True Artist Share Percent</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox84</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox82">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>LOTCAPS Resolved Num</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox82</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox80">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>x 2</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox80</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox78">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Product Seq</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox78</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox76">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Product Sort</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox76</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox70">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Product ID</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox70</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox64">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Product Description</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox64</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox66">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Product Share</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox66</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox68">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Product List</Value>
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox68</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contract_ID">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contract_ID.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contract_ID</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contract_ID_export">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contract_ID_export.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contract_ID_export</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contract_Description">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contract_Description.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contract_Description</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contract_Status">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contract_Status.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contract_Status</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contribution_Type">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contribution_Type.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contribution_Type</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Admin_Class">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Admin_Class.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Admin_Class</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="PG">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!PG.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>PG</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Multi_Particpant">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Multi_Particpant.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Multi_Particpant</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="keyword">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!keyword.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>keyword</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="x_1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!x_1.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>x_1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Artist_Seq">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Artist_Seq.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Artist_Seq</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Artist_Sort">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Artist_Sort.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Artist_Sort</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contributor_ID">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contributor_ID.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contributor_ID</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Contributor_Name">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Contributor_Name.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Contributor_Name</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Artist_Share">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Artist_Share.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Artist_Share</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Artist_Pot">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Artist_Pot.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Artist_Pot</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="True_Artist_Share_Percent">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!True_Artist_Share_Percent.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>True_Artist_Share_Percent</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="LOTCAPS_Resolved_Num">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!LOTCAPS_Resolved_Num.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>LOTCAPS_Resolved_Num</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="x_2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!x_2.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>x_2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Product_Seq">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Product_Seq.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Product_Seq</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Product_Sort">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Product_Sort.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Product_Sort</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Product_ID">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Product_ID.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Product_ID</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Product_Description">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Product_Description.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Product_Description</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Product_Share">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Product_Share.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Product_Share</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Product_List">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Product_List.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Product_List</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Contract_ID_export.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Artist_Seq.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Artist_Seq.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Artist_Sort.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Contributor_ID.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Contributor_Name.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Artist_Share.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Artist_Pot.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!True_Artist_Share_Percent.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(Sum(Fields!LOTCAPS_Resolved_Num.Value, "DataSet1")&gt;0, FALSE, TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(Sum(Fields!Product_Seq.Value, "DataSet1")&gt;0, FALSE, TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(Sum(Fields!Product_Seq.Value, "DataSet1")&gt;0, FALSE, TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(Sum(Fields!Product_Sort.Value, "DataSet1")&gt;0, FALSE, TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Product_ID.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Product_Description.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(Sum(Fields!Product_Share.Value, "DataSet1")&gt;0, FALSE, TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIF(COUNT(IIF(Fields!Product_List.Value="",nothing,1))&gt;1,FALSE,TRUE)</Hidden>
+              </Visibility>
+            </TablixMember>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>6.16162cm</Top>
+        <Height>1.2cm</Height>
+        <Width>98.42cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>3.04166in</Height>
+    <Style />
+  </Body>
+  <Width>38.74803in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <Description> Product &amp; Artist Share</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <DataSourceReference>Temp_DataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>6984c87a-7510-498b-a26e-1caae9f790e7</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@Product_ID_Input">
+            <Value>=Parameters!Product_ID_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Contract_ID_Input">
+            <Value>=Parameters!Contract_ID_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Keyword_Input">
+            <Value>=Parameters!Keyword_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Output_Method_Input">
+            <Value>=Parameters!Output_Method_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Contributor_Name_Input">
+            <Value>=Parameters!Contributor_Name_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Contributor_ID_Input">
+            <Value>=Parameters!Contributor_ID_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Direct_Output_CheckBox_Input">
+            <Value>=Parameters!Direct_Output_CheckBox_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Direct_Input_Inclusion_Input">
+            <Value>=Parameters!Direct_Input_Inclusion_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Direct_Input_Exclusion_Input">
+            <Value>=Parameters!Direct_Input_Exclusion_Input.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Report_Folder_Input">
+            <Value>=Parameters!Report_Folder_Input.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+
+--		SET SHOWPLAN_XML off    DROP TABLE #Product_Filter
+--		USE bbc_cra_prod
+		
+		DECLARE @Contract_ID nvarchar(60)					SET @Contract_ID				= @Contract_ID_Input
+		DECLARE @Product_ID nvarchar(30)					SET @Product_ID					= @Product_ID_Input
+		DECLARE @Contributor_Name nvarchar(30)				SET @Contributor_Name			= @Contributor_Name_Input
+		DECLARE @Contributor_ID nvarchar(30)				SET @Contributor_ID				= @Contributor_ID_Input
+		DECLARE @Keyword nvarchar(60)						SET @Keyword					= @Keyword_Input
+		DECLARE @Output_Method nvarchar(60)					SET @Output_Method				= @Output_Method_Input
+		DECLARE @Direct_Output_CheckBox bit					SET @Direct_Output_CheckBox		= @Direct_Output_CheckBox_Input
+		DECLARE @Direct_Input_Inclusion nvarchar(30)		SET @Direct_Input_Inclusion		= @Direct_Input_Inclusion_Input
+		DECLARE @Direct_Input_Exclusion nvarchar(30)		SET @Direct_Input_Exclusion		= @Direct_Input_Exclusion_Input
+		DECLARE @Report_Folder	nvarchar(200)				SET @Report_Folder			= @Report_Folder_Input
+		
+		--DECLARE @Contract_ID nvarchar(60)					SET @Contract_ID				= '4000409,3002702'--'4000008,3002702' --'3002702,3002695,4000008,4000009,821297'
+		--DECLARE @Product_ID nvarchar(30)					SET @Product_ID					= 'All'--'ABHH916E' --'BBCDVD1509,ABGD003P,ABGD005D' --'AVDD848S,ABGD003P'
+		--DECLARE @Keyword nvarchar(60)						SET @Keyword					= 'All'--'3002702,3002695,4000008,4000009,821297'
+		--DECLARE @Output_Method nvarchar(60)					SET @Output_Method				= 'Contracts_n_ContributorShare_n_ProductShare'		/* 		Contracts_Only 		Contracts_n_Contributor		Contracts_n_ProductShare		Contracts_n_ContributorShare_n_ProductShare 		*/
+		--DECLARE @Contributor_Name nvarchar(600)				SET @Contributor_Name			= 'All' -- SEEKING  _Statement_Schedule  _Buyout_Expiration_Date  '_Contributors' -- _Next_Rights  _Scope  _Recipient _Contributors  _Template_Group_Statements Sales Reduction Multiplier
+		--DECLARE @Contributor_ID nvarchar(600)				SET @Contributor_ID				= 'All' --'20042790,16799350' -- _Statement_Schedule  _Buyout_Expiration_Date  '_Contributors' -- _Next_Rights  _Scope  _Recipient _Contributors  _Template_Group_Statements Sales Reduction Multiplier
+		--DECLARE @Direct_Output_CheckBox bit					SET @Direct_Output_CheckBox		= 0
+		--DECLARE @Direct_Input_Inclusion nvarchar(30)		SET @Direct_Input_Inclusion		= 'No' --  No , Yes_Product_Scope, Yes_Contract, Yes_Contributor_ID
+		--DECLARE @Direct_Input_Exclusion nvarchar(30)		SET @Direct_Input_Exclusion		= 'No' --  No , Yes_Product_Scope, Yes_Contract, Yes_Contributor_ID
+		--DECLARE @Report_Folder	nvarchar(200)				SET @Report_Folder				=	'/CasparReportManager/CRA V6.2/06 - Contracts'
+	
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Fixed Paramters *******************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		DECLARE @Warehoue_Supporting_Server_n_Database nvarchar(100)
+		IF (@Report_Folder LIKE '%CRA V6.2%') BEGIN SET @Warehoue_Supporting_Server_n_Database = 'WGB01DB7047.Caspar_Warehouse_Supporting'  END 
+		IF (@Report_Folder LIKE '%CRA 6.2 - Live - WGB01DB1041%') BEGIN SET @Warehoue_Supporting_Server_n_Database = 'WGB01DB1041.Caspar_Warehouse_Supporting'  END 
+
+		DECLARE @Direct_Input_CheckBox bit		SET @Direct_Input_CheckBox		= 0
+		DECLARE @Package_Deployment bit			SET @Package_Deployment			= 1
+		IF (@Contract_ID = 'All' AND @Product_ID = 'All' AND  @Keyword = 'All' AND @Contributor_Name =	'All' AND @Contributor_ID = 'All' AND @Direct_Input_Inclusion		= 'No' AND @Direct_Input_Exclusion		= 'No') BEGIN SET @Direct_Output_CheckBox	=  1 END
+						
+		SET @Contract_ID			= REPLACE(@Contract_ID,' ','') 
+		SET @Product_ID				= REPLACE(@Product_ID,' ','') 
+		SET @Contributor_ID			= REPLACE(@Contributor_ID,' ','') 
+		SET @Contributor_Name		= REPLACE(@Contributor_Name,' ','') 
+
+		DECLARE @SQL nvarchar(max)
+
+	--  If the product Share drop down section has many lines where there are no products, then use the default product share.
+	--  Where a product doesnt have a specific product share, use the default product share with a sort order of zero 
+	--	IF NOT EXISTS (select name from sys.indexes where name =  'IX_x_contract_udf_lookup_where_udf_sid_13_99_202' AND object_id = OBJECT_ID(N'dbo.x_contract_udf_lookup') )		BEGIN CREATE NONCLUSTERED INDEX IX_x_contract_udf_lookup_where_udf_sid_13_99_202 ON [dbo].[x_contract_udf_lookup] ([udf_sid]) INCLUDE ([contract_sid],[udkey_1_sid],[udkey_1_group_sid])		where udf_sid IN (13,99,202) END
+	--	IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract_udf_lookup_where_udf_sid' AND object_id = OBJECT_ID(N'dbo.x_contract_udf_lookup') ) DROP STATISTICS dbo.x_contract_udf_lookup.kl_x_contract_udf_lookup_where_udf_sid		CREATE STATISTICS kl_x_contract_udf_lookup_where_udf_sid		ON [x_contract_udf_lookup] (udkey_1_sid)
+	--	IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract_udf_lookup_where_udf_sid_group' AND object_id = OBJECT_ID(N'dbo.x_contract_udf_lookup') ) DROP STATISTICS dbo.x_contract_udf_lookup.kl_x_contract_udf_lookup_where_udf_sid_group		CREATE STATISTICS kl_x_contract_udf_lookup_where_udf_sid_group		ON [x_contract_udf_lookup] (udkey_1_group_sid)
+	--	IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract_rights' AND object_id = OBJECT_ID(N'dbo.x_contract_rights') ) DROP STATISTICS dbo.x_contract_rights.kl_x_contract_rights		CREATE STATISTICS kl_x_contract_rights		ON x_contract_rights (udkey_1_sid)
+	--	IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract_rights_group' AND object_id = OBJECT_ID(N'dbo.x_contract_rights') ) DROP STATISTICS dbo.x_contract_rights.kl_x_contract_rights_group		CREATE STATISTICS kl_x_contract_rights_group		ON x_contract_rights (udkey_1_group_sid)
+	--	IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_c_udkey_1_group_dtl' AND object_id = OBJECT_ID(N'dbo.c_udkey_1_group_dtl') ) DROP STATISTICS dbo.c_udkey_1_group_dtl.kl_c_udkey_1_group_dtl		CREATE STATISTICS kl_c_udkey_1_group_dtl		ON c_udkey_1_group_dtl (udkey_1_sid)
+	--	IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract_udf_udf_value' AND object_id = OBJECT_ID(N'dbo.x_contract_udf') ) DROP STATISTICS dbo.x_contract_udf.kl_x_contract_udf_udf_value		CREATE STATISTICS kl_x_contract_udf_udf_value		ON [x_contract_udf] (udf_value)
+	--	IF NOT EXISTS (select name from sys.indexes where name =  'IX_x_contract_udf_lookup_where_udf_sid_104' AND object_id = OBJECT_ID(N'dbo.x_contract_udf_lookup') )BEGIN CREATE NONCLUSTERED INDEX IX_x_contract_udf_lookup_where_udf_sid_104 ON [dbo].[x_contract_udf_lookup] (contract_sid) 	where udf_sid = 104 END 
+	--	IF NOT EXISTS (select name from sys.indexes where name =  'IX_x_contract_udf_where_udf_sid_104' AND object_id = OBJECT_ID(N'dbo.x_contract_udf') )		BEGIN CREATE NONCLUSTERED INDEX IX_x_contract_udf_where_udf_sid_104 ON [dbo].[x_contract_udf] (contract_sid)  where udf_sid = 104 END 
+	--  IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract_participant' AND object_id = OBJECT_ID(N'dbo.x_contract_participant') ) DROP STATISTICS dbo.x_contract_participant.kl_x_contract_participant		CREATE STATISTICS kl_x_contract_participant		ON x_contract_participant (contact_sid)
+	--  SELECT name, STATS_DATE([object_id], [stats_id]) AS [StatisticUpdateDate] FROM sys.stats 	WHERE name = N'kl_c_udkey_1_group_dtl' AND object_id = OBJECT_ID(N'dbo.c_udkey_1_group_dtl') AND 
+	--  CREATE NONCLUSTERED INDEX IX_x_contract_rights_GH ON [dbo].[x_contract_rights] ([udkey_1_group_sid]) INCLUDE ([contract_sid])
+	--  CREATE NONCLUSTERED INDEX IX_x_contract_rights_GH2 ON [dbo].[x_contract_rights] ([udkey_1_sid]) INCLUDE ([contract_sid])
+	--  CREATE NONCLUSTERED INDEX IX_c_udkey_1_group_dtl_GH ON [dbo].[c_udkey_1_group_dtl] ([udkey_1_sid]) INCLUDE ([udkey_1_group_sid])
+	
+		
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/****************************** START FILTERS ***************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+
+		
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Inclusion Filter *****************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		DECLARE @Direct_Input_Inclusion_Contract_Filter nvarchar(200)				SET @Direct_Input_Inclusion_Contract_Filter = ''
+		DECLARE @Direct_Input_Inclusion_Product_Filter_On_Contract nvarchar(200)	SET @Direct_Input_Inclusion_Product_Filter_On_Contract = ''
+		DECLARE @Direct_Input_Inclusion_Contributor_Filter nvarchar(200)			SET @Direct_Input_Inclusion_Contributor_Filter = ''
+
+
+		IF(	@Direct_Input_Inclusion &lt;&gt; 'No')
+		BEGIN
+				SET @SQL = 
+				'
+				EXEC  '+@Warehoue_Supporting_Server_n_Database+'.[Report_Support].[usp_Truncate_Tables]  @Table_To_Truncate = ''ACT0349_Inclusion'' 
+				EXEC  '+@Warehoue_Supporting_Server_n_Database+'.[Report_Support].[usp_Run_Package]  @Package_To_Run = ''Caspar_Warehouse_ACT0349_Inclusion''
+				'
+				EXEC (@SQL)
+
+				IF OBJECT_ID('tempdb..#x_contract_Inclusion') IS NOT NULL DROP TABLE #x_contract_Inclusion
+				CREATE TABLE #x_contract_Inclusion (Inclusion_Column nvarchar(100),Direct_Input_Inclusion nvarchar(30))
+
+				SET @SQL = 
+				'
+				INSERT INTO #x_contract_Inclusion (Inclusion_Column )
+				select distinct Inclusion_Column
+				from '+@Warehoue_Supporting_Server_n_Database+'.[Report_Support].[ACT0349_Inclusion]
+				'
+				EXEC (@SQL)
+
+				IF (@Direct_Input_Inclusion = 'Yes_Contract' )			BEGIN SET @Direct_Input_Inclusion_Contract_Filter					= ' INNER JOIN #x_contract_Inclusion xci on xci.Inclusion_Column = xc.contract_id ' END
+				IF (@Direct_Input_Inclusion = 'Yes_Contributor_ID' )	BEGIN SET @Direct_Input_Inclusion_Contributor_Filter				= ' INNER JOIN #x_contract_Inclusion xci on xci.Inclusion_Column = cc.contact_ID ' END
+				IF (@Direct_Input_Inclusion = 'Yes_Product_Scope' )		BEGIN SET @Direct_Input_Inclusion_Product_Filter_On_Contract		= ' INNER JOIN #x_contract_Inclusion xci on xci.Inclusion_Column = xcu.udkey_1_id ' 	END
+				--select * from #x_contract_Inclusion
+		END
+	
+	
+
+
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Exclusion Filter *****************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		DECLARE @Direct_Input_Exclusion_Contract_Filter nvarchar(200)				SET @Direct_Input_Exclusion_Contract_Filter = ''
+		DECLARE @Direct_Input_Exclusion_Product_Filter_On_Contract nvarchar(200)	SET @Direct_Input_Exclusion_Product_Filter_On_Contract = ''
+		DECLARE @Direct_Input_Exclusion_Contributor_Filter nvarchar(200)			SET @Direct_Input_Exclusion_Contributor_Filter = ''
+
+
+		IF(	@Direct_Input_Exclusion &lt;&gt; 'No')
+		BEGIN
+				SET @SQL = 
+				'
+				EXEC  '+@Warehoue_Supporting_Server_n_Database+'.[Report_Support].[usp_Truncate_Tables]  @Table_To_Truncate = ''ACT0349_Exclusion'' 
+				EXEC  '+@Warehoue_Supporting_Server_n_Database+'.[Report_Support].[usp_Run_Package]  @Package_To_Run = ''Caspar_Warehouse_ACT0349_Exclusion''
+				'
+				EXEC (@SQL)
+
+				IF OBJECT_ID('tempdb..#x_contract_Exclusion') IS NOT NULL DROP TABLE #x_contract_Exclusion
+				CREATE TABLE #x_contract_Exclusion (Exclusion_Column nvarchar(100),Direct_Input_Exclusion nvarchar(30))
+
+				SET @SQL = 
+				'
+				INSERT INTO #x_contract_Exclusion (Exclusion_Column )
+				select distinct Exclusion_Column
+				from '+@Warehoue_Supporting_Server_n_Database+'.[Report_Support].[ACT0349_Exclusion]
+				'
+				EXEC (@SQL)
+
+				IF (@Direct_Input_Exclusion = 'Yes_Contract' )			BEGIN SET @Direct_Input_Exclusion_Contract_Filter					= ' AND xc.contract_id NOT IN (select Exclusion_Column from #x_contract_Exclusion) ' END
+				IF (@Direct_Input_Exclusion = 'Yes_Contributor_ID' )	BEGIN SET @Direct_Input_Exclusion_Contributor_Filter				= ' where cc.contact_id NOT IN (select Exclusion_column from #x_contract_Exclusion) ' END
+			--	IF (@Direct_Input_Exclusion = 'Yes_Product_Scope' )		BEGIN SET @Direct_Input_Exclusion_Product_Filter_On_Contract		= ' INNER JOIN #x_contract_Exclusion xci on xci.Exclusion_Column &lt;&gt; xcu.udkey_1_id ' 	END
+				--select * from #x_contract_Exclusion
+		END
+		
+
+
+
+	/**************************************************************************************************************************************************************************************/
+	/**************************************************************************************************************************************************************************************/
+	/*********************** Contributors Filter *******************************************************************************************************************************************/
+	/**************************************************************************************************************************************************************************************/
+	/**************************************************************************************************************************************************************************************/
+		
+		IF OBJECT_ID('tempdb..#C_Contact') IS NOT NULL DROP TABLE #C_Contact
+		CREATE TABLE #C_Contact (contact_sid int, Contributor_ID nvarchar(30), Contributor_Name nvarchar(30),contract_sid int,recipient_group_sid int)
+
+		DECLARE @Contact nvarchar(100) 
+		DECLARE @Contact_Filter nvarchar(500) SET @Contact_Filter = ''
+
+		IF (@Contributor_Name &lt;&gt; 'All' AND @Direct_Input_Inclusion &lt;&gt; 'Yes_Contributor_ID' )							BEGIN SET @Contact_Filter = 'where cc.formatted_name LIKE ''%'+REPLACE(@Contributor_Name,',',''',''')+'%'''  SET @Contributor_ID = ''   END
+		IF (@Contributor_Name = 'All' AND @Direct_Input_Inclusion &lt;&gt; 'Yes_Contributor_ID' AND @Contributor_ID &lt;&gt; 'All')	BEGIN SET @Contact_Filter  = 'where cc.contact_id IN ('''+REPLACE(@Contributor_ID,',',''',''')+''')'  SET @Contributor_Name = '' END
+		IF (@Direct_Input_Inclusion = 'Yes_Contributor_ID' ) BEGIN SET @Contact_Filter = @Direct_Input_Inclusion_Contributor_Filter  SET @Contributor_Name = 'Not_All' END
+		IF (@Direct_Input_Exclusion = 'Yes_Contributor_ID' ) BEGIN SET @Contact_Filter = @Direct_Input_Exclusion_Contributor_Filter  SET @Contributor_Name = 'Not_All' END
+
+	
+	
+		SET @SQL =
+		'
+		INSERT INTO #C_Contact (contact_sid, Contributor_ID, Contributor_Name,contract_sid,recipient_group_sid)
+		select  cc.contact_sid, contact_ID AS Contributor_ID, LEFT(Formatted_name,30) as Contributor_Name, xcp.contract_sid,recipient_group_sid
+		from c_contact cc
+		INNER JOIN x_contract_participant xcp on xcp.contact_sid = cc.contact_sid
+		'+@Contact_Filter+'
+		
+		'
+	--	print (@SQL)
+		exec  (@SQL)
+		
+	--select * from #C_Contact
+
+		IF (@Contributor_Name = 'All'  AND @Contributor_ID = 'All')		BEGIN SET @Contact_Filter = '' END
+		IF (@Contributor_Name &lt;&gt; 'All' )								BEGIN SET @Contact_Filter = ' INNER JOIN #C_Contact cc on cc.contract_sid = xc.contract_sid ' END
+		IF (@Contributor_ID &lt;&gt; 'All')									BEGIN SET @Contact_Filter = ' INNER JOIN #C_Contact cc on cc.contract_sid = xc.contract_sid ' END
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Product Filter *******************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+			
+
+		IF OBJECT_ID('tempdb..#Product_Filter') IS NOT NULL DROP TABLE #Product_Filter
+		IF OBJECT_ID('tempdb..#x_contract_Product_filter') IS NOT NULL DROP TABLE #x_contract_Product_filter
+		CREATE TABLE #Product_Filter			(udkey_1_sid int) 
+		CREATE TABLE #x_contract_Product_filter (contract_sid int,udkey_1_sid int)
+		DECLARE @Product_Filter nvarchar(max)		SET @Product_Filter = ''
+
+		IF (@Product_ID &lt;&gt; 'All') 
+		BEGIN 	
+					SET @Product_Filter = 'where udkey_1_id IN ('''+REPLACE(@Product_ID,',',''',''')+''')' 
+					SET @SQL =
+							'
+							INSERT INTO #Product_Filter (udkey_1_sid) 
+							select cu1.udkey_1_sid  
+							from dbo.c_udkey_1 cu1
+							'+@Product_Filter+'
+							'
+							exec  (@SQL)
+					SET @Product_Filter = ''
+		END
+		
+		IF (@Product_ID &lt;&gt; 'All' AND @Contract_ID = 'All')
+		BEGIN
+				SET @SQL = 
+				'
+				INSERT INTO #x_contract_Product_filter (contract_sid)
+				select  xcr.contract_sid--, xcr.udkey_1_sid--, udkey_1_group_sid
+				from dbo.X_contract_rights xcr
+				INNER JOIN #Product_Filter pf on pf.udkey_1_sid = xcr.udkey_1_sid
+				where xcr.udkey_1_sid IS NOT NULL 
+				UNION
+				select  xcr.contract_sid--, cu1d.udkey_1_sid--, udkey_1_group_sid
+				from dbo.X_contract_rights xcr
+				INNER JOIN dbo.c_udkey_1_group_dtl cu1d on cu1d.udkey_1_group_sid = xcr.udkey_1_group_sid
+				INNER JOIN #Product_Filter pf on pf.udkey_1_sid = cu1d.udkey_1_sid
+				where xcr.udkey_1_group_sid IS NOT NULL 
+				'
+				exec (@SQL)
+
+				SET @Product_Filter =' INNER JOIN #x_contract_Product_filter cf on cf.contract_sid = xc.contract_sid '
+		END
+		
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Product In/Exclusion Filter ******************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		IF (@Product_ID = 'All' AND @Direct_Input_Inclusion	= 'Yes_Product_Scope') 
+		BEGIN 
+				INSERT INTO #x_contract_Product_filter (contract_sid,udkey_1_sid)
+				select  distinct xcr.contract_sid, xcr.udkey_1_sid--, udkey_1_group_sid
+				from dbo.X_contract_rights xcr
+				INNER JOIN c_udkey_1 cu1			on cu1.udkey_1_sid = xcr.udkey_1_sid
+				INNER JOIN #x_contract_Inclusion pf on pf.Inclusion_Column = cu1.udkey_1_id
+				UNION
+				select distinct xcr.contract_sid, cu1d.udkey_1_sid--, udkey_1_group_sid
+				from dbo.X_contract_rights xcr
+				INNER JOIN dbo.c_udkey_1_group_dtl cu1d on cu1d.udkey_1_group_sid = xcr.udkey_1_group_sid
+				INNER JOIN c_udkey_1 cu1				on cu1.udkey_1_sid = cu1d.udkey_1_sid
+				INNER JOIN #x_contract_Inclusion pf		on pf.Inclusion_Column = cu1.udkey_1_id
+		
+				SET @Product_Filter =' INNER JOIN #x_contract_Product_filter cf on cf.contract_sid = xc.contract_sid '
+			--	select * from #x_contract_Product_filter where udkey_1_sid IN (1968690914, 1926)
+		END
+
+
+		IF (@Product_ID = 'All' AND @Direct_Input_Exclusion	= 'Yes_Product_Scope') 
+		BEGIN 
+				INSERT INTO #x_contract_Product_filter (contract_sid,udkey_1_sid)
+				select   xcr.contract_sid, xcr.udkey_1_sid--, udkey_1_group_sid
+				from dbo.X_contract_rights xcr
+				INNER JOIN c_udkey_1 cu1			on cu1.udkey_1_sid = xcr.udkey_1_sid
+				where cu1.udkey_1_id NOT IN (select Exclusion_column from #x_contract_Exclusion)
+				UNION
+				select  xcr.contract_sid, cu1d.udkey_1_sid--, udkey_1_group_sid
+				from dbo.X_contract_rights xcr
+				INNER JOIN dbo.c_udkey_1_group_dtl cu1d on cu1d.udkey_1_group_sid = xcr.udkey_1_group_sid
+				INNER JOIN c_udkey_1 cu1				on cu1.udkey_1_sid = cu1d.udkey_1_sid
+				where cu1.udkey_1_id NOT IN (select Exclusion_column from #x_contract_Exclusion)
+		
+				SET @Product_Filter =' INNER JOIN #x_contract_Product_filter cf on cf.contract_sid = xc.contract_sid '
+			--	select * from #x_contract_Product_filter where udkey_1_sid IN (1968690914, 1926)
+		END
+
+
+
+		/*****************************************************************************************************/
+		/****************************** Keyword Filter *******************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		
+			DECLARE @Keyword_Filter nvarchar(200) SET @Keyword_Filter = ''
+			IF (@Keyword &lt;&gt; 'All')
+			BEGIN
+			IF OBJECT_ID('tempdb..#x_keyword') IS NOT NULL DROP TABLE #x_keyword
+			select contract_sid
+			INTO #x_keyword
+			from			x_contract_keyword xck
+			where keyword_sid IN (select keyword_sid 	from c_keyword where descr = @Keyword)
+		
+			SET @Keyword_Filter = 'INNER JOIN #x_keyword k on k.contract_sid = xc.contract_sid '
+			END
+	
+	
+
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/****************************** END FILTERS ***************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+
+
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/****************************** START GATHER ***************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Attached Contract ****************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+	
+			
+				IF OBJECT_ID('tempdb..#x_contract') IS NOT NULL DROP TABLE #x_contract
+				CREATE TABLE #x_contract (contract_sid int, Payee_contact_sid int, Contract_id nvarchar(30),Contract_Export_ID nvarchar(30),Contract_Description nvarchar(60), Royalty_period nvarchar(30),	Admin_class nvarchar(30),		Contract_Status nvarchar(30),		Account nvarchar(30),		x_O nvarchar(1),		Contributor_ID nvarchar(30),		Contributor_Payee_ID nvarchar(30),		Contributor_Statement_ID_n_Slot nvarchar(30),		Contributor_Order nvarchar(30),		Contributor_Description nvarchar(30),		Contributor_Payee_Description nvarchar(30),		Contributor_Statement_Description nvarchar(30),		x_1 nvarchar(1),		Preparer nvarchar(30),		Keyword nvarchar(30),		x_2 nvarchar(1),		Date_Report_Extracted date,		Date_Royalty_Period_End date,		Date_Due date,		Date_Run date,		Date_Approved date,		Approval_comment nvarchar(60),		x_3 nvarchar(1),		Units decimal(10,2),		Amount decimal(10,2),		x_4 nvarchar(1),		Sales_Period nvarchar(30),		Currency nvarchar(30),		Product_ID nvarchar(30),		Sales_Type_ID nvarchar(30),		Distrubtor nvarchar(30),		Department nvarchar(30),		Media nvarchar(30),		SAP_Territory nvarchar(30),		Contribution_Type nvarchar(30),		x_5 nvarchar(1)	,deal_sid int, royalty_period_sid int, preparer_sid int,admin_class_sid int, Contributor_contact_sid INT,Statement_contact_sid INT, multi_Particpant nvarchar(1),Statement_Contributor_ID_n_Slot nvarchar(30), Statement_Contributor_ID_Description nvarchar(30), recipient_group_sid nvarchar(30), status_sid int, TransType nvarchar(30), Payee_ID nvarchar(30), Payee_ID_Name nvarchar(30), Sort_order_nbr int, Contributor_ID_Name nvarchar(30), Date_royalty_Period nvarchar(30)	, Lotscaps nvarchar(30), PG nvarchar(3))
+
+				DECLARE @Contract_Filter nvarchar(100) 
+				IF (@Contract_ID &lt;&gt; 'All') BEGIN 	SET @Contract_Filter = 'AND xc.contract_id IN ('''+REPLACE(@Contract_ID,',',''',''')+''')' END
+				IF (@Contract_ID = 'All') BEGIN 	SET @Contract_Filter = '' END
+
+				SET @SQL =
+				'
+				INSERT INTO #x_contract (contract_sid,contract_id, Contract_Description,status_sid, admin_class_sid , keyword,multi_Particpant) 
+				select xc.contract_sid, LEFT(xc.contract_id,30) AS contract_id, LEFT(REPLACE(xc.descr,'','',''''),60) as Contract_Description,xc.status_sid, xc.admin_class_sid , '''+@Keyword+''' as keyword, CASE WHEN xc.admin_class_sid IN (13,23) THEN ''Y'' ELSE ''N'' END AS multi_Particpant
+				from dbo.x_contract xc
+				'+@Product_Filter+'
+				'+@Keyword_Filter+'
+				'+@Contact_Filter+'
+				'+@Direct_Input_Inclusion_Contract_Filter+'
+				where xc.original_contract_sid = xc.contract_sid AND xc.status_sid &lt;&gt; 18
+				'+@Contract_Filter+'
+				'+@Direct_Input_Exclusion_Contract_Filter+'
+				'
+				exec  (@SQL)
+		
+
+				CREATE CLUSTERED INDEX IX_x_contract    ON #x_contract (contract_sid);
+				IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_x_contract ' AND object_id = OBJECT_ID(N'tempdb..#x_contract') ) DROP STATISTICS #x_contract.kl_x_contract
+				CREATE STATISTICS kl_x_contract		ON #x_contract (contract_sid)
+	
+
+		--GRANT SHOWPLAN TO caspar_app
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Attached Products ****************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+					
+					DECLARE @Direct_Input_Inclusion_Product_Filter_On_Product nvarchar(200) SET @Direct_Input_Inclusion_Product_Filter_On_Product = ''
+					IF (@Direct_Input_Inclusion		= 'Yes_Product_Scope' )
+						BEGIN
+								INSERT INTO #Product_Filter (udkey_1_sid)
+								select distinct udkey_1_sid from 	#x_contract_Product_filter
+								SET @Product_ID = 'Not_All'
+						END
+					
+					DECLARE @Direct_Input_Exclusion_Product_Filter_On_Product nvarchar(200) SET @Direct_Input_Exclusion_Product_Filter_On_Product = ''
+					IF (@Direct_Input_Exclusion		= 'Yes_Product_Scope' )
+						BEGIN
+								INSERT INTO #Product_Filter (udkey_1_sid)
+								select distinct udkey_1_sid from 	#x_contract_Product_filter
+								SET @Product_ID = 'Not_All'
+						END
+					
+			
+					IF (@Product_ID &lt;&gt; 'All') 
+						BEGIN 
+							SET 	@Product_Filter =
+							'
+								select    xcr.contract_sid,  xcr.udkey_1_sid AS udkey_1_sid, xcr.udkey_1_group_sid,  cu1.udkey_1_id  AS udkey_1_id
+								from			dbo.x_contract_rights		xcr
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcr.contract_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = xcr.udkey_1_sid
+								INNER JOIN		#Product_Filter			pf on pf.udkey_1_sid = xcr.udkey_1_sid
+								UNION 
+								select    xcr.contract_sid,  cu1_2.udkey_1_sid  AS udkey_1_sid, xcr.udkey_1_group_sid,  cu1.udkey_1_id AS udkey_1_id
+								from			dbo.x_contract_rights		xcr
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcr.contract_sid
+								LEFT JOIN		dbo.c_udkey_1_group_dtl		cu1_2 on cu1_2.udkey_1_group_sid = xcr.udkey_1_group_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = cu1_2.udkey_1_sid
+								INNER JOIN		#Product_Filter			pf on pf.udkey_1_sid = cu1_2.udkey_1_sid
+								UNION 
+								select  xcu.contract_sid,   xcu.udkey_1_sid AS udkey_1_sid, xcu.udkey_1_group_sid,  cu1.udkey_1_id AS udkey_1_id
+								from dbo.x_contract_udf_lookup xcu
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = xcu.udkey_1_sid
+								INNER JOIN		#Product_Filter			pf on pf.udkey_1_sid = xcu.udkey_1_sid
+								where xcu.udf_sid IN (13,99,202)
+								UNION 
+								select  xcu.contract_sid,   cu1_2.udkey_1_sid  AS udkey_1_sid, xcu.udkey_1_group_sid,  cu1.udkey_1_id  AS udkey_1_id
+								from dbo.x_contract_udf_lookup xcu
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+								LEFT JOIN		dbo.c_udkey_1_group_dtl		cu1_2 on cu1_2.udkey_1_group_sid = xcu.udkey_1_group_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = cu1_2.udkey_1_sid
+								INNER JOIN		#Product_Filter			pf on pf.udkey_1_sid = cu1_2.udkey_1_sid
+								where xcu.udf_sid IN (13,99,202)
+						'
+						END
+	
+
+							IF (@Product_ID = 'All') 
+						BEGIN 
+							SET 	@Product_Filter =
+							'
+								select    xcu.contract_sid, COALESCE ( xcu.udkey_1_sid, cu1_2.udkey_1_sid ) AS udkey_1_sid, xcu.udkey_1_group_sid, cu1.udkey_1_id AS udkey_1_id
+								from			dbo.x_contract_rights		xcu
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = xcu.udkey_1_sid
+								LEFT JOIN		dbo.c_udkey_1_group_dtl		cu1_2 on cu1_2.udkey_1_group_sid = xcu.udkey_1_group_sid
+								UNION 
+								select  xcu.contract_sid,  ISNULL ( xcu.udkey_1_sid, cu1_2.udkey_1_sid ) AS udkey_1_sid, xcu.udkey_1_group_sid, cu1.udkey_1_id AS udkey_1_id
+								from dbo.x_contract_udf_lookup xcu
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+								LEFT JOIN		dbo.c_udkey_1_group_dtl		cu1_2 on cu1_2.udkey_1_group_sid = xcu.udkey_1_group_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = ISNULL ( xcu.udkey_1_sid, cu1_2.udkey_1_sid )
+								where xcu.udf_sid IN (13,99,202)
+							'
+
+						END
+
+								/*
+								select  xcu.contract_sid,  ISNULL ( xcu.udkey_1_sid, cu1_2.udkey_1_sid ) AS udkey_1_sid, xcu.udkey_1_group_sid, cu1.udkey_1_id AS udkey_1_id
+								from dbo.x_contract_udf_lookup xcu
+								INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+								LEFT JOIN		dbo.c_udkey_1_group_dtl		cu1_2 on cu1_2.udkey_1_group_sid = xcu.udkey_1_group_sid
+								LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = ISNULL ( xcu.udkey_1_sid, cu1_2.udkey_1_sid )
+								where xcu.udf_sid IN (13,99,202)
+					*/		
+
+
+
+
+
+		IF OBJECT_ID('tempdb..#Attached_Products') IS NOT NULL DROP TABLE #Attached_Products
+		CREATE TABLE #Attached_Products (contract_sid int,  udkey_1_sid int, udkey_1_group_sid int, Product_ID nvarchar(30), Product_Description nvarchar(60),  Default_Type bit, Product_Share	decimal(10,2), Product_List nvarchar(60), seq_nbr int,sort_order_nbr int, Duplicate_PS bit, UDF_Type nvarchar(10) DEFAULT 'Default')
+		
+		SET @SQL =
+		'
+				;WITH CTE_Attached_Products AS
+				(
+					'+@Product_Filter+'
+				)
+				INSERT INTO #Attached_Products (contract_sid ,  udkey_1_sid , udkey_1_group_sid , Product_ID , Product_Description ,  Default_Type , Product_Share	, Product_List , seq_nbr ,sort_order_nbr , Duplicate_PS )
+				select  distinct xcu.contract_sid,  xcu.udkey_1_sid, xcu.udkey_1_group_sid, LEFT(cu1.udkey_1_id,30) as Product_ID, REPLACE(LEFT(cu1.descr,60),'','','''') as Product_Description, NULL AS Default_Type, NULL AS Product_Share	, REPLACE(cu1_h.descr,'','','''') AS Product_List, 0 as seq_nbr,0 as  sort_order_nbr, 0 as Duplicate_PS
+				from CTE_Attached_Products xcu
+				LEFT JOIN		dbo.c_udkey_1				cu1 on cu1.udkey_1_sid = xcu.udkey_1_sid
+				LEFT JOIN		dbo.c_udkey_1_group_hdr		cu1_h on cu1_h.udkey_1_group_sid = xcu.udkey_1_group_sid
+				'+@Direct_Input_Inclusion_Product_Filter_On_Contract+'
+		'
+		exec (@SQL)
+		--print (@SQL)
+	
+		DELETE FROM #Attached_Products where udkey_1_sid IS NULL AND udkey_1_group_sid IS NULL
+
+		CREATE CLUSTERED INDEX IX_Attached_Products    ON #Attached_Products (contract_sid,Default_Type);
+		IF EXISTS (SELECT name FROM sys.stats WHERE name = N'kl_Attached_Products' AND object_id = OBJECT_ID(N'tempdb..#Attached_Products') ) DROP STATISTICS #Attached_Products.kl_Attached_Products
+		CREATE STATISTICS kl_Attached_Products		ON #Attached_Products (contract_sid,Default_Type)
+		
+	
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Attached Product Share ***********************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		
+			-- Query Tuning advised to split up
+			IF OBJECT_ID('tempdb..#Product_Share') IS NOT NULL DROP TABLE #Product_Share
+			CREATE TABLE #Product_Share (contract_sid int, udkey_1_sid int, udkey_1_group_sid int, Product_Share decimal(18,2), sort_order_nbr int)
+		
+			SET @SQL = 
+			'
+			INSERT INTO #Product_Share (contract_sid, udkey_1_sid, udkey_1_group_sid, Product_Share, sort_order_nbr )
+			select xcu.contract_sid, xcu.udkey_1_sid, xcu.udkey_1_group_sid, CAST(CAST(xcu.value  as float) as decimal(18,2))  AS Product_Share, xcu.sort_order_nbr
+			from dbo.x_contract_udf_lookup xcu
+			INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+			where xcu.udf_sid = 104
+	
+			DELETE FROM #Product_Share 	where COALESCE(udkey_1_sid, udkey_1_group_sid) IS NULL
+
+			INSERT INTO #Product_Share (contract_sid,Product_Share, Sort_order_nbr)
+			select   xcu.contract_sid, CAST(CAST(xcu.udf_value  as float) as decimal(18,2))   As Product_Share, 0 AS Sort_order_nbr
+			from dbo.x_contract_udf xcu
+			INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+			where xcu.udf_sid = 104 
+			'
+			EXEC (@SQL)
+
+		CREATE CLUSTERED INDEX IX_Product_Share    ON #Product_Share (contract_sid,udkey_1_sid);
+		IF EXISTS (SELECT name FROM sys.stats WHERE name = N'Kl_Product_Share' AND object_id = OBJECT_ID(N'tempdb..#Attached_Products') ) DROP STATISTICS #Product_Share.Kl_Product_Share
+		CREATE STATISTICS Kl_Product_Share		ON #Product_Share (contract_sid,udkey_1_sid)
+
+		UPDATE #Attached_Products
+		SET sort_order_nbr = ps.sort_order_nbr, seq_nbr =  ps.sort_order_nbr
+		--select ps.sort_order_nbr, ap.sort_order_nbr, ap.seq_nbr
+		from #Attached_Products ap
+		INNER JOIN #Product_Share ps on ap.udkey_1_sid = ps.udkey_1_sid
+
+	--	DELETE FROM #Attached_Products	where Product_Share = 0
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Scope Product ********************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+			IF OBJECT_ID('tempdb..#Scope') IS NOT NULL DROP TABLE #Scope
+			CREATE TABLE #Scope (contract_sid int, udkey_1_sid int)
+			
+			IF (@Output_Method	IN ('Contracts_n_ContributorShare_n_ProductShare','Contracts_n_Contributor'))
+			BEGIN
+				INSERT INTO #Scope (contract_sid , udkey_1_sid ) 
+				select distinct xcr.contract_sid,    ISNULL(xcr.udkey_1_sid, cu1gd.udkey_1_sid) as udkey_1_sid
+				from x_contract_rights xcr
+				INNER JOIN #Attached_Products ap on ap.contract_sid = xcr.contract_sid
+				LEFT JOIN c_udkey_1_group_dtl cu1gd on cu1gd.udkey_1_group_sid = xcr.udkey_1_group_sid
+			END
+			
+
+
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/****************************** END GATHER ***************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************************************************/
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Duplciate Product Share **********************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		
+		IF OBJECT_ID('tempdb..#Duplicate_Products') IS NOT NULL DROP TABLE #Duplicate_Products
+		CREATE TABLE #Duplicate_Products (contract_sid int, udkey_1_sid int, cnt int,Product_ID nvarchar(30), Product_Description nvarchar(60),Product_List nvarchar(60))
+		INSERT INTO #Duplicate_Products(contract_sid , udkey_1_sid , cnt ,Product_ID , Product_Description ,Product_List )
+		select ps.contract_sid, ps.udkey_1_sid, count(*) as cnt, a.Product_ID, a.Product_Description, a.Product_List
+		from		#Product_Share		ps
+		INNER JOIN #Attached_Products	a on ps.contract_sid = a.contract_sid and ps.udkey_1_sid = a.udkey_1_sid
+		GROUP BY ps.contract_sid, ps.udkey_1_sid, a.Product_ID, a.Product_Description, a.Product_List
+		HAVING count(*) &lt;&gt; 1
+
+	
+		DELETE FROm #Attached_Products
+		from			#Attached_Products	cte 				
+		INNER JOIN		#Duplicate_Products 	d on cte.contract_sid = d.contract_sid and cte.udkey_1_sid = d.udkey_1_sid
+		
+		INSERT INTO #Attached_Products (contract_sid, udkey_1_sid, Product_ID, Product_Description,seq_nbr ,Product_Share, sort_order_nbr,Default_Type,Duplicate_PS)
+		select d.contract_sid, d.udkey_1_sid, d.Product_ID, d.Product_Description,sort_order_nbr as seq_nbr ,CAST(CAST(p.Product_Share as float) as decimal(18,2)) as Product_Share, sort_order_nbr, 0 as Default_Type,1 as Duplicate_PS
+		from		#Duplicate_Products d
+		LEFT JOIN	#Product_Share		p on p.contract_sid = d.contract_sid and p.udkey_1_sid = d.udkey_1_sid
+	
+				
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Updates **************************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+	
+			--select a.*, p.Product_Share
+			UPDATE #Attached_Products
+			SET Product_Share = CAST(CAST(p.Product_Share as float) as decimal(18,2)), Default_Type = 0
+			--select	a.*, a.Product_Share, p.Product_Share
+			from			#Attached_Products	a
+			INNER JOIN		#Product_Share		p on a.contract_sid = p.contract_sid AND a.udkey_1_sid = p.udkey_1_sid 
+			where a.Product_Share IS  NULL
+
+			UPDATE #Attached_Products
+			SET Product_Share = CAST(CAST(p.Product_Share as float) as decimal(18,2)) , Default_Type = 1
+			--select a.*, p.Product_Share
+			from			#Attached_Products	a
+			LEFT JOIN		#Product_Share		p on a.contract_sid = p.contract_sid --AND a.udkey_1_sid &lt;&gt; p.udkey_1_sid
+			where a.Default_Type IS NULL		and p.Sort_order_nbr = 0	AND a.Product_Share IS NULL
+
+			SET @SQL =
+			'
+			UPDATE #x_contract
+			SET Contract_Status = cs.status_id
+			from			#x_contract xc
+			LEFT JOIN		dbo.c_status	cs on cs.status_sid = xc.status_sid
+
+			UPDATE #x_contract
+			SET  Admin_class = xa.admin_class_id
+			from #x_contract xc
+			LEFT JOIN	dbo.x_admin_class xa   on xa.admin_class_sid = xc.admin_class_sid 
+
+			UPDATE #x_contract
+			SET  Contribution_Type = cu8.udkey_8_id
+			--select xcu.udf_value, cu8.udkey_8_id
+			from #x_contract xc
+			LEFT JOIN	dbo.x_contract_udf xcu   on xcu.contract_sid = xc.contract_sid
+			LEFT JOIN	dbo.c_udkey_8			cu8 on cu8.udkey_8_sid = xcu.udf_value
+			where xcu.udf_sid = 84
+
+			UPDATE #x_contract
+			SET  PG = (CASE WHEN xcu.udf_value = 31 THEN ''Y'' ELSE ''N'' END)
+			--select CASE WHEN xcu.udf_value IS NOT NULL THEN ''Yes'' ELSE ''Non'' END AS PG
+			from #x_contract xc
+			LEFT JOIN	dbo.x_contract_udf xcu   on xcu.contract_sid = xc.contract_sid
+			where xcu.udf_sid IN (188,203) AND xcu.udf_value IS NOT NULL
+			'
+			EXEC (@SQL)
+
+			UPDATE #x_contract
+			SET Contribution_Type = 'None'
+			FROM #x_contract
+			where Contribution_Type is null
+
+/**********************************************************************************************************************************************/
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Contracts_n_ContributorShare_n_ProductShare **************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		IF OBJECT_ID('tempdb..#Artist_Shares') IS NOT NULL DROP TABLE #Artist_Shares
+		CREATE TABLE #Artist_Shares([UDF_Type] [varchar](7) NULL,[PG] [nvarchar](3) NULL,	[Contract_ID] [nvarchar](30) NULL,	[Contract_ID_export] [nvarchar](35) NULL,[Contract_Description] [nvarchar](30) NULL,	[Artist_Seq] nvarchar(5) NULL,	[Artist_Sort] nvarchar(5) NULL,	[Multi_Particpant] nvarchar(5) NULL,	[Artist_Share] [nvarchar](max) NULL,	[Contributor_ID] nvarchar(30) NULL,	[udkey_1_sid] [int] NULL,	[udkey_1_group_sid] [int] NULL,	[contract_sid] int NULL,	[contact_sid] int NULL,	[Contract_Status] [nvarchar](30) NULL,	[Admin_class] [nvarchar](30) NULL,	[Contributor_Name] [nvarchar](4000) NULL,	[Contribution_Type] [nvarchar](30) NULL, True_Artist_Share_Percent nvarchar(10), Artist_Pot nvarchar(10) default '100', Artist_n_Product_Share_Combined decimal(10,2), keyword nvarchar(30), LOTCAPS_Resolved_Num int) 
+		
+		CREATE CLUSTERED INDEX IX_Artist_Shares    ON #Artist_Shares (contract_sid);
+		IF EXISTS (SELECT name FROM sys.stats WHERE name = N'Kl_Artist_Shares' AND object_id = OBJECT_ID(N'tempdb..#Attached_Products') ) DROP STATISTICS #Artist_Shares.Kl_Artist_Shares	CREATE STATISTICS Kl_Artist_Shares		ON #Artist_Shares (contract_sid)
+		
+		DECLARE @cnt int SET @cnt = (select count(*) from #c_contact)
+					IF (@cnt &lt;&gt; 1) BEGIN 	SET  @contact_filter =  ' INNER JOIN #c_contact cc on cc.contact_sid = xcp.contact_sid AND cc.contract_sid = xcp.contract_sid' END
+					IF (@cnt = 0) BEGIN		SET @contact_filter = '' END 
+
+		IF (@Output_Method	= 'Contracts_n_ContributorShare_n_ProductShare')
+		BEGIN
+					SET @SQL =
+					'
+					;WITH CTE_Artist_Shares AS
+					(
+					select ''Lookup'' AS UDF_Type, xc.Contract_id as Contract_ID 	,CASE 
+						WHEN xcu.user_contact_sid IS NOT NULL AND LEN(xcu.seq_nbr)  = 1 THEN xc.Contract_id + ''00'' + CAST(xcu.seq_nbr as nvarchar(3))
+						WHEN xcu.user_contact_sid IS NOT NULL AND LEN(xcu.seq_nbr)  = 2 THEN xc.Contract_id  + ''0'' + CAST(xcu.seq_nbr as nvarchar(3))
+						WHEN xcu.user_contact_sid IS NOT NULL AND LEN(xcu.seq_nbr)  = 3 THEN xc.Contract_id  + '''' + CAST(xcu.seq_nbr as nvarchar(3))
+					 ELSE  xc.Contract_id END AS Contract_ID_Export,		
+					ISNULL(xcu.user_contact_sid,xcp.contact_sid ) as contact_sid, xcu.seq_nbr, xcu.sort_order_nbr, xc.Multi_Particpant	,xcu.udkey_1_sid, xcu.udkey_1_group_sid, xcu.contract_sid	,CAST(xcu.value as nvarchar(10)) AS Artist_Share	,xc.Contract_Status,xc.Admin_class, xc.Contribution_Type,xc.PG, LEFT(REPLACE(xc.contract_description,'','',''''),30) as contract_description, xc.keyword
+					from			dbo.x_contract_udf_lookup		xcu
+					INNER JOIn		#x_contract						xc on xc.contract_sid = xcu.contract_sid
+					INNER JOIn		dbo.x_contract_participant			xcp on xc.contract_sid = xcp.contract_sid AND ISNULL(xcu.user_contact_sid,xcp.contact_sid ) = xcp.contact_sid
+					'+@contact_filter+'
+					where xcu.udf_sid in (13,202 ,99) 
+					UNION ALL
+					select ''Default'' AS UDF_Type, xc.Contract_id as Contract_ID ,xc.Contract_id as Contract_ID_Export,	xcp.contact_sid  as contact_sid, 1 as seq_nbr, 1 as sort_order_nbr,  ''N'' Multi_Particpant	,NULL AS udkey_1_sid, NULL AS udkey_1_group_sid, xcu.contract_sid	, CAST(xcu.udf_value as nvarchar(10)) AS Artist_Share	,xc.Contract_Status,xc.Admin_class, xc.Contribution_Type,xc.PG,LEFT(REPLACE(xc.contract_description,'','',''''),30) as contract_description, xc.keyword
+					from			dbo.x_contract_udf		xcu
+						INNER JOIn		#x_contract						xc on xc.contract_sid = xcu.contract_sid
+						INNER JOIn		dbo.x_contract_participant			xcp on xc.contract_sid = xcp.contract_sid AND xcp.contact_sid = xcp.contact_sid
+					'+@contact_filter+' 
+					where xcu.udf_sid in (99) AND xcu.udf_value IS NOT NULL 
+					)
+					,CTE_Gather_Contact_Details AS
+					(
+					select  cte.UDF_Type, cte.PG, cte.Contract_ID, cte.Contract_ID_export, cte.seq_nbr as [Artist_Seq], cte.sort_order_nbr as [Artist_Sort], cte.Multi_Particpant,cte.Artist_Share, cc.contact_id AS Contributor_ID, cte.udkey_1_sid, cte.udkey_1_group_sid, cte.contract_sid,cte.contact_sid	,cte.Contract_Status,cte.Admin_class , REPLACE(cc.formatted_name,'','','''') AS Contributor_Name, cte.Contribution_Type , cte.Artist_Share as True_Artist_Share_Percent, cte.contract_description, cte.keyword
+					from			CTE_Artist_Shares  cte
+					INNER JOIN		dbo.c_contact			cc on cc.contact_sid = cte.contact_sid
+					)
+					INSERT INTO #Artist_Shares ([UDF_Type]      ,[PG]      ,[Contract_ID]      ,[Contract_ID_export]      ,[Artist_Seq]      ,[Artist_Sort]      ,[Multi_Particpant]      ,[Artist_Share]     ,[Contributor_ID]      ,[udkey_1_sid]      ,[udkey_1_group_sid]      ,[contract_sid]      ,[contact_sid]      ,[Contract_Status]      ,[Admin_class]      ,[Contributor_Name]      ,[Contribution_Type] , True_Artist_Share_Percent, contract_description,keyword)
+					select cte.UDF_Type, cte.PG, cte.Contract_ID, cte.Contract_ID_export, cte.[Artist_Seq], cte.[Artist_Sort], cte.Multi_Particpant,cte.Artist_Share,cte.Contributor_ID, cu1gd.udkey_1_sid, cte.udkey_1_group_sid, cte.contract_sid,cte.contact_sid	,cte.Contract_Status,cte.Admin_class , cte.contributor_Name, cte.Contribution_Type , cte.True_Artist_Share_Percent, cte.contract_description, cte.keyword
+					from CTE_Gather_Contact_Details cte
+					LEFT JOIN c_udkey_1_group_dtl cu1gd on cu1gd.udkey_1_group_sid = cte.udkey_1_group_sid
+									
+					'
+					EXEC (@SQL)
+					
+			END
+				
+		
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Contracts_n_ContributorShare_n_ProductShare **************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		
+		IF (@Output_Method	= 'Contracts_n_Contributor')
+		BEGIN
+					SET @SQL =
+					'
+					;WITH CTE_Artist_Shares AS
+					(
+					select ''Lookup'' AS UDF_Type, xc.Contract_ID ,NULL AS Contract_ID_Export,ISNULL(cc.contact_sid,xcp.contact_sid ) as contact_sid, null as seq_nbr, null as sort_order_nbr, xc.Multi_Particpant	,NULL AS udkey_1_sid, NULL AS udkey_1_group_sid, xc.contract_sid	,NULL AS  Artist_Share	,xc.Contract_Status,xc.Admin_class, xc.Contribution_Type,xc.PG, LEFT(REPLACE(xc.contract_description,'','',''''),30) as contract_description, xc.keyword
+					from			#x_contract		xc
+					INNER JOIn		dbo.x_contract_participant			xcp on xc.contract_sid = xcp.contract_sid AND xcp.contact_sid  = xcp.contact_sid
+					'+@contact_filter+'
+					
+					)
+					,CTE_Gather_Contact_Details AS
+					(
+					select  cte.UDF_Type, cte.PG, cte.Contract_ID, cte.Contract_ID_export, cte.seq_nbr as [Artist_Seq], cte.sort_order_nbr as [Artist_Sort], cte.Multi_Particpant,cte.Artist_Share, cc.contact_id AS Contributor_ID, cte.udkey_1_sid, cte.udkey_1_group_sid, cte.contract_sid,cte.contact_sid	,cte.Contract_Status,cte.Admin_class , REPLACE(cc.formatted_name,'','','''') AS Contributor_Name, cte.Contribution_Type , cte.Artist_Share as True_Artist_Share_Percent, cte.contract_description, cte.keyword
+					from			CTE_Artist_Shares  cte
+					INNER JOIN		dbo.c_contact			cc on cc.contact_sid = cte.contact_sid
+					)
+					INSERT INTO #Artist_Shares ([UDF_Type]      ,[PG]      ,[Contract_ID]      ,[Contract_ID_export]      ,[Artist_Seq]      ,[Artist_Sort]      ,[Multi_Particpant]      ,[Artist_Share]     ,[Contributor_ID]      ,[udkey_1_sid]      ,[udkey_1_group_sid]      ,[contract_sid]      ,[contact_sid]      ,[Contract_Status]      ,[Admin_class]      ,[Contributor_Name]      ,[Contribution_Type] , True_Artist_Share_Percent, contract_description,keyword, Artist_pot)
+					select cte.UDF_Type, cte.PG, cte.Contract_ID, cte.Contract_ID_export, cte.[Artist_Seq], cte.[Artist_Sort], cte.Multi_Particpant,cte.Artist_Share,cte.Contributor_ID, cu1gd.udkey_1_sid, cte.udkey_1_group_sid, cte.contract_sid,cte.contact_sid	,cte.Contract_Status,cte.Admin_class , cte.contributor_Name, cte.Contribution_Type , cte.True_Artist_Share_Percent, cte.contract_description, cte.keyword, null as Artist_pot
+					from CTE_Gather_Contact_Details cte
+					LEFT JOIN c_udkey_1_group_dtl cu1gd on cu1gd.udkey_1_group_sid = cte.udkey_1_group_sid
+									
+					'
+					EXEC (@SQL)
+					--print (@SQL)
+			END
+	
+
+			/*****************************************************************************************************/
+			/*****************************************************************************************************/
+			/****************************** Ensrue Scope Product Exists in Artist Share  *************************/
+			/*****************************************************************************************************/
+			/*****************************************************************************************************/
+
+			-- Ensure the Products on Scope have a exist in the artist share
+			IF (@Output_Method	='Contracts_n_ContributorShare_n_ProductShare')
+			BEGIN
+
+					;WITH CTE_Get_Artist_Share_Products as
+					(
+					select   a.contract_sid, a.udkey_1_group_sid, ISNULL(a.udkey_1_sid,  cu1gd.udkey_1_sid) AS udkey_1_sid
+					from 					#Artist_Shares a
+					left joIN c_udkey_1_group_dtl cu1gd on cu1gd.udkey_1_group_sid = a.udkey_1_group_sid
+					)
+					, CTE_Contract_Detail AS
+					(
+					select distinct  PG,Contract_ID,Contract_ID_export,Contract_Description,Multi_Particpant,Contributor_ID,contract_sid,contact_sid,Contract_Status,Admin_class,Contributor_Name,Contribution_Type,Artist_Pot,Artist_n_Product_Share_Combined,keyword from #Artist_Shares
+				
+					)
+					insert into #Artist_Shares (UDF_Type,PG,Contract_ID,Contract_ID_export,Contract_Description,Artist_Seq,Artist_Sort,Multi_Particpant,Artist_Share,Contributor_ID,udkey_1_sid,udkey_1_group_sid,contract_sid,contact_sid,Contract_Status,Admin_class,Contributor_Name,Contribution_Type,True_Artist_Share_Percent,Artist_Pot,Artist_n_Product_Share_Combined,keyword)
+					select		'Lookup' as UDF_Type,d.PG ,d.Contract_ID,d.Contract_ID_export,Contract_Description,0 as Artist_Seq,0 as Artist_Sort,d.Multi_Particpant,0 as Artist_Share,d.Contributor_ID,s.udkey_1_sid,null as udkey_1_group_sid,d.contract_sid,d.contact_sid,d.Contract_Status,d.Admin_class,d.Contributor_Name,d.Contribution_Type,0 as True_Artist_Share_Percent,d.Artist_Pot,0 as Artist_n_Product_Share_Combined,d.keyword
+					from		#Scope							s
+					LEFT JOIN	CTE_Get_Artist_Share_Products	cte on cte.udkey_1_sid = s.udkey_1_sid and cte.contract_sid =  s.contract_sid
+					INNER JOIN  CTE_Contract_Detail d on d.contract_sid = s.contract_sid
+					where cte.udkey_1_sid is null
+			END
+			
+
+
+
+					/*****************************************************************************************************/
+					/*****************************************************************************************************/
+					/****************************** Princpal Product *****************************************************/
+					/*****************************************************************************************************/
+					/*****************************************************************************************************/
+	
+		IF (@Output_Method	= 'Contracts_n_ContributorShare_n_ProductShare')
+		BEGIN
+					SET @SQL = 
+					'
+					UPDATE #Artist_Shares
+					SET Artist_Pot = cu1u.udf_value, True_Artist_Share_Percent =   CAST(LEFT(CAST(artist_Share as decimal(18,2))/nullif(CAST(cu1u.udf_value as decimal(18,2)), 0)*100,10) as nvarchar(10))
+					--select xcu.contract_sid, xcu.udf_value as udkey_1_sid, cu1u.udf_value AS Artist_Pot, a.Artist_Pot
+					from dbo.x_contract_udf xcu
+					INNER JOIN	#Artist_Shares a   on xcu.contract_sid = a.contract_sid
+					INNER JOIN	dbo.c_udkey_1_udf cu1u on cu1u.udkey_1_sid = xcu.udf_value
+					where xcu.udf_sid = 103 and cu1u.udf_sid = 92
+					'
+					EXEC (@SQL)
+
+					UPDATE #Attached_Products
+					SET UDF_Type = 'Lookup'
+					from #Attached_Products ap
+					INNER JOIN #Artist_Shares a on a.contract_sid = ap.contract_sid AND a.udkey_1_sid = ap.udkey_1_sid
+						
+		END
+		
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Lotcsap  ********************************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+			IF OBJECT_ID('tempdb..#Lotcsap') IS NOT NULL DROP TABLE #Lotcsap
+			CREATE TABLE #Lotcsap (contract_sid int, seq_nbr int, sort_order_nbr int, contact_sid int, LOTCAPS_Resolved_Num int)
+
+			IF (@Output_Method	IN ('Contracts_n_ContributorShare_n_ProductShare','Contracts_n_Contributor'))
+			BEGIN
+				insert into #Lotcsap (contract_sid , seq_nbr , sort_order_nbr , contact_sid , LOTCAPS_Resolved_Num )
+				select xcu.contract_sid,  xcu.seq_nbr, xcu.sort_order_nbr, xcu.user_contact_sid as contact_sid, xcu.value as LOTCAPS_Resolved_Num
+				from x_contract_udf_lookup xcu
+				INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+				where  udf_sid IN (151,212)
+				UNION ALL
+				select xcu.contract_sid,  0 as seq_nr, 0 as sort_order_nbr, cc.contact_sid as contact_sid,xcu.udf_value as LOTCAPS_Resolved_Num
+				from x_contract_udf xcu
+				INNER JOIN		#x_contract				xc on xc.contract_sid = xcu.contract_sid
+				INNER JOIN		#c_contact				cc on cc.contract_sid = xcu.contract_sid
+				where udf_sid IN (151,212) and udf_value IS NOT NULL
+
+				UPDATE #Artist_Shares
+				SET LOTCAPS_Resolved_Num = l.LOTCAPS_Resolved_Num
+			--	select a.contact_sid, l.LOTCAPS_Resolved_Num
+				from #Artist_Shares a
+				INNER JOIN #Lotcsap l on l.contract_sid = a.contract_sid and a.contact_sid = l.contact_sid
+				where l.LOTCAPS_Resolved_Num IS NOT NULL
+				--select top 2 LOTCAPS_Resolved_Num from #Artist_Shares
+			END
+
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Contracts_n_ProductShare ********************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		IF (@Output_Method		= 'Contracts_n_ProductShare'	)
+		BEGIN
+					set @SQL =
+					'
+					;with CTE_Contract_Only AS
+					(
+					select DISTINCT ''Default'' AS UDF_Type, xc.Contract_id as Contract_ID ,null as Contract_ID_Export,	NULL as contact_sid, null as seq_nbr, null as sort_order_nbr,  0 Multi_Particpant	,NULL AS udkey_1_sid, NULL AS udkey_1_group_sid, xcu.contract_sid	,null AS Artist_Share	,xc.Contract_Status,xc.Admin_class, xc.Contribution_Type,xc.PG,LEFT(REPLACE(xc.contract_description,'','',''''),30) as contract_description, xc.keyword
+					from			dbo.x_contract_udf		xcu
+					INNER JOIn		#x_contract						xc on xc.contract_sid = xcu.contract_sid
+					INNER JOIn		dbo.x_contract_participant			xcp on xc.contract_sid = xcp.contract_sid AND xcp.contact_sid = xcp.contact_sid
+					where xcu.udf_sid in (13,202 ,99) 
+					)
+					INSERT INTO #Artist_Shares ([UDF_Type]      ,[PG]      ,[Contract_ID]      ,[Contract_ID_export]      ,[Artist_seq]      ,[Artist_sort]      ,[Multi_Particpant]      ,[Artist_Share]      ,[Contributor_ID]      ,[udkey_1_sid]      ,[udkey_1_group_sid]      ,[contract_sid]      ,[contact_sid]      ,[Contract_Status]      ,[Admin_class]      ,[Contributor_Name]      ,[Contribution_Type], contract_description, keyword)
+					select cte.UDF_Type, cte.PG, cte.Contract_ID, cte.Contract_ID_export, cte.seq_nbr as artist_seq, cte.sort_order_nbr as artist_sort, cte.Multi_Particpant,cte.Artist_Share, null AS Contributor_ID, cte.udkey_1_sid, cte.udkey_1_group_sid, cte.contract_sid,cte.contact_sid	,cte.Contract_Status,cte.Admin_class, null AS Contributor_Name, cte.Contribution_Type, cte.contract_description, cte.keyword
+					from			CTE_Contract_Only  cte
+
+					
+					--UPDATE #Artist_Shares
+					--SET Multi_Particpant = xcu.item_overridden_flag
+					----select xcu.item_overridden_flag
+					--from #Artist_Shares xc
+					--LEFT JOIN	dbo.x_contract_udf xcu   on xcu.contract_sid = xc.contract_sid
+					--where xcu.udf_sid = 215
+					'
+					EXEC (@SQL)
+
+					UPDATE #Artist_Shares
+					SET Artist_Pot = null, True_Artist_Share_Percent = null 
+				
+		END
+
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+
+-- 10 Minutes to here for full extraction
+-- 40 Minutes to insert into another database
+
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Selection Updates ****************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		DECLARE @Selection_Product_ID nvarchar(10) SET @Selection_Product_ID = ''
+		DECLARE @Selection_Product_Descr nvarchar(60) SET @Selection_Product_Descr = ''
+		IF (@Product_ID &lt;&gt; 'All') BEGIN SET @Selection_Product_ID = @Product_ID  SET @Selection_Product_Descr = (select LEFT(REPLACE(descr,',',''),60) from c_udkey_1 where udkey_1_id = @Product_ID )  END
+
+		--select (CASE WHEN @Product_ID &lt;&gt; 'All' THEN @Selection_Product_ID ELSE NULL END) as Product_ID,  (CASE WHEN @Product_ID &lt;&gt; 'All' THEN @Selection_Product_Descr ELSE NULL END) as Product_Description
+	
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Final Output No Direct Output ****************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		-- select * from #Lotcsap
+
+		IF (@Output_Method	= 'Contracts_Only' AND @Direct_Output_CheckBox = 0)
+		BEGIN
+				
+				select a.contract_sid ,null as udkey_1_sid ,null as keyy, '\' AS x_0,	 a.Contract_ID		,  null as Contract_ID_export		,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword ,  '\' AS x_1, null as [Artist_Seq], null as [Artist_Sort], null as Contributor_ID, null as Contributor_Name, null as Artist_Share,null as Artist_Pot, null as True_Artist_Share_Percent,null as LOTCAPS_Resolved_Num,  '\' AS x_2 ,null as  seq_nbr, null as Product_Seq, null as sort_order_nbr,  null as  Product_Sort, null as Default_Type, null as Duplicate_PS,  (CASE WHEN @Product_ID &lt;&gt; 'All' THEN @Selection_Product_ID ELSE NULL END) as Product_ID,  (CASE WHEN @Product_ID &lt;&gt; 'All' THEN @Selection_Product_Descr ELSE NULL END) as Product_Description,null as  Product_Share, null as Product_List ,'\' AS x_3
+				from			#x_contract			a
+				
+		END
+
+		IF (@Output_Method	= 'Contracts_n_ProductShare' AND @Direct_Output_CheckBox = 0)
+		BEGIN
+				
+				select a.contract_sid ,p1.udkey_1_sid ,a.Contract_ID + p1.Product_ID as keyy, '\' AS x_0,	 a.Contract_ID		, a.Contract_ID_export		,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword,  '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent, a.LOTCAPS_Resolved_Num, '\' AS x_2 ,p1.seq_nbr as Product_Seq, p1.sort_order_nbr as Product_Sort, p1.Default_Type, p1.Duplicate_PS,  p1.Product_ID, p1.Product_Description,CAST(p1.Product_Share as decimal(18,2)) as Product_Share, p1.Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+				LEFT JOIN		#Attached_Products		p1 on p1.contract_sid = a.contract_sid 
+				where p1.Product_ID IS NOT NULL
+		END
+		IF (@Output_Method	= 'Contracts_n_Contributor' AND @Direct_Output_CheckBox = 0)
+		BEGIN 
+
+				select a.contract_sid ,null as udkey_1_sid ,null as keyy, '\' AS x_0,	 a.Contract_ID, a.Contract_ID_export,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword, '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent,a.LOTCAPS_Resolved_Num,  '\' AS x_2 ,null as  Product_Seq, null as Product_Sort, null as Default_Type, null as Duplicate_PS, (CASE WHEN @Product_ID &lt;&gt; 'All' THEN @Selection_Product_ID ELSE NULL END) as Product_ID,  (CASE WHEN @Product_ID &lt;&gt; 'All' THEN @Selection_Product_Descr ELSE NULL END) as Product_Description,null as  Product_Share,  null as Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+		
+		END
+
+		IF (@Output_Method	= 'Contracts_n_ContributorShare_n_ProductShare' AND @Direct_Output_CheckBox = 0)
+		BEGIN
+			
+				select a.contract_sid ,p1.udkey_1_sid ,a.Contract_ID + p1.Product_ID as keyy, '\' AS x_0,	 a.Contract_ID, a.Contract_ID_export,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword, '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent,a.LOTCAPS_Resolved_Num,   '\' AS x_2 ,p1.seq_nbr as Product_Seq, p1.sort_order_nbr as Product_Sort, p1.Default_Type, p1.Duplicate_PS,  p1.Product_ID, p1.Product_Description,CAST(p1.Product_Share as decimal(18,2)) as Product_Share, p1.Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+				INNER JOIN		#Attached_Products		p1 on p1.contract_sid = a.contract_sid AND p1.udkey_1_group_sid = a.udkey_1_group_sid
+				where a.Multi_Particpant = 'Y' --AND p1.Product_ID IS NOT NULL
+				UNION ALL
+				select  a.contract_sid ,p1.udkey_1_sid ,a.Contract_ID + p1.Product_ID as keyy, '\' AS x_0,	 a.Contract_ID, a.Contract_ID_export,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword, '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent,  a.LOTCAPS_Resolved_Num, '\' AS x_2 ,p1.seq_nbr as Product_Seq, p1.sort_order_nbr as Product_Sort, p1.Default_Type, p1.Duplicate_PS,  p1.Product_ID, p1.Product_Description,CAST(p1.Product_Share as decimal(18,2)) as Product_Share, p1.Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+				INNER JOIN		#Attached_Products		p1 on p1.contract_sid = a.contract_sid and p1.UDF_Type = a.UDF_Type AND p1.udkey_1_sid = a.udkey_1_sid --and p1.seq_nbr = a.Artist_Seq
+				where a.Multi_Particpant = 'N' 
+		
+		END
+		
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/****************************** Final Output YES Direct Output ***************************************/
+		/*****************************************************************************************************/
+		/*****************************************************************************************************/
+
+		DECLARE @Table_To_Truncate nvarchar(100)
+		DECLARE @Package_To_Run nvarchar(100)
+		
+		IF (@Direct_Output_CheckBox = 1) 
+			BEGIN
+				 EXEC  [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[usp_Truncate_Tables]  @Table_To_Truncate = 'ACT0349_Extraction' 
+				 EXEC  [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[usp_Truncate_Tables]  @Table_To_Truncate = 'ACT0349_Inclusion'
+				 EXEC  [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[usp_Truncate_Tables]  @Table_To_Truncate = 'ACT0349_Exclusion'
+			END
+		
+		
+		IF (@Output_Method	= 'Contracts_Only' AND @Direct_Output_CheckBox = 1)
+		BEGIN
+				INSERT INTO    [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[ACT0349_Extraction] (contract_sid,udkey_1_sid,keyy,x_0,Contract_ID,Contract_ID_export,Contract_Description,Contract_Status,Contribution_Type,Admin_Class,PG,Multi_Particpant,keyword,x_1,Artist_Seq,Artist_Sort,Contributor_ID,Contributor_Name,Artist_Share,Artist_Pot,True_Artist_Share_Percent,x_2,Product_Seq,Product_Sort,Default_Type,Duplicate_PS,Product_ID,Product_Description,Product_Share,Product_List,x_3)
+				select a.contract_sid ,null as udkey_1_sid ,null as keyy, '\' AS x_0,	 a.Contract_ID		,  null as Contract_ID_export		,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword ,  '\' AS x_1, null as [Artist_Seq], null as [Artist_Sort], null as Contributor_ID, null as Contributor_Name, null as Artist_Share,null as Artist_Pot, null as True_Artist_Share_Percent,  '\' AS x_2 , null as Product_Seq, null as  Product_Sort, null as Default_Type, null as Duplicate_PS,  null as Product_ID, null as Product_Description,null as  Product_Share, null as Product_List ,'\' AS x_3
+				from			#x_contract			a
+			
+		END
+
+		IF (@Output_Method	= 'Contracts_n_ProductShare' AND @Direct_Output_CheckBox = 1)
+		BEGIN
+				INSERT INTO    [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[ACT0349_Extraction] ([contract_sid] ,[udkey_1_sid],[keyy]  ,[x_0] ,[Contract_ID] ,[Contract_ID_export] ,[Contract_Description] ,[Contract_Status] ,[Contribution_Type]      ,[Admin_Class]      ,[PG]      ,[Multi_Particpant]  ,keyword    ,[x_1]      ,[Artist_Seq]      ,[Artist_Sort]      ,[Contributor_ID]      ,[Contributor_Name]      ,[Artist_Share]      ,[Artist_Pot]      ,[True_Artist_Share_Percent]      ,[x_2]      ,[Product_Seq]      ,[Product_Sort]      ,[Default_Type]      ,[Duplicate_PS]      ,[Product_ID]      ,[Product_Description]      ,[Product_Share]      ,[Product_List]      ,[x_3])
+				select a.contract_sid ,p1.udkey_1_sid ,a.Contract_ID + p1.Product_ID as keyy, '\' AS x_0,	 a.Contract_ID		, a.Contract_ID_export		,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword,  '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent,  '\' AS x_2 ,p1.seq_nbr as Product_Seq, p1.sort_order_nbr as Product_Sort, p1.Default_Type, p1.Duplicate_PS,  p1.Product_ID, p1.Product_Description,CAST(p1.Product_Share as decimal(18,2)) as Product_Share, p1.Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+				LEFT JOIN		#Attached_Products		p1 on p1.contract_sid = a.contract_sid 
+				where p1.Product_ID IS NOT NULL
+		END
+
+
+		IF (@Output_Method	= 'Contracts_n_ContributorShare_n_ProductShare' AND @Direct_Output_CheckBox = 1)
+		BEGIN
+				INSERT INTO    [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[ACT0349_Extraction] ([contract_sid] ,[udkey_1_sid],[keyy]  ,[x_0] ,[Contract_ID] ,[Contract_ID_export] ,[Contract_Description] ,[Contract_Status] ,[Contribution_Type]      ,[Admin_Class]      ,[PG]      ,[Multi_Particpant]  ,keyword    ,[x_1]      ,[Artist_Seq]      ,[Artist_Sort]      ,[Contributor_ID]      ,[Contributor_Name]      ,[Artist_Share]      ,[Artist_Pot]      ,[True_Artist_Share_Percent]      ,[x_2]      ,[Product_Seq]      ,[Product_Sort]      ,[Default_Type]      ,[Duplicate_PS]      ,[Product_ID]      ,[Product_Description]      ,[Product_Share]      ,[Product_List]      ,[x_3])
+				select a.contract_sid ,p1.udkey_1_sid ,a.Contract_ID + p1.Product_ID as keyy, '\' AS x_0,	 a.Contract_ID, a.Contract_ID_export,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword, '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent,  '\' AS x_2 ,p1.seq_nbr as Product_Seq, p1.sort_order_nbr as Product_Sort, p1.Default_Type, p1.Duplicate_PS,  p1.Product_ID, p1.Product_Description,CAST(p1.Product_Share as decimal(18,2)) as Product_Share, p1.Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+				INNER JOIN		#Attached_Products		p1 on p1.contract_sid = a.contract_sid AND p1.udkey_1_group_sid = a.udkey_1_group_sid
+				where a.Multi_Particpant = 'Y' --AND p1.Product_ID IS NOT NULL
+				UNION ALL
+				select  a.contract_sid ,p1.udkey_1_sid ,a.Contract_ID + p1.Product_ID as keyy, '\' AS x_0,	 a.Contract_ID, a.Contract_ID_export,a.Contract_Description,  a.Contract_Status,a.Contribution_Type as Contribution_Type,   a.Admin_Class,a.PG, a.Multi_Particpant, a.keyword, '\' AS x_1, a.[Artist_Seq],a.[Artist_Sort], a.Contributor_ID, a.Contributor_Name, a.Artist_Share,a.Artist_Pot, a.True_Artist_Share_Percent,  '\' AS x_2 ,p1.seq_nbr as Product_Seq, p1.sort_order_nbr as Product_Sort, p1.Default_Type, p1.Duplicate_PS,  p1.Product_ID, p1.Product_Description,CAST(p1.Product_Share as decimal(18,2)) as Product_Share, p1.Product_List ,'\' AS x_3
+				from			#Artist_Shares			a
+				INNER JOIN		#Attached_Products		p1 on p1.contract_sid = a.contract_sid and p1.UDF_Type = a.UDF_Type AND p1.udkey_1_sid = a.udkey_1_sid --and p1.seq_nbr = a.Artist_Seq
+				where a.Multi_Particpant = 'N' 
+						
+		END
+		IF (@Direct_Output_CheckBox = 1) 
+		
+		BEGIN 
+			EXEC  [WGB01DB7049].[Caspar_Warehouse_Supporting].[Report_Support].[usp_Run_Package]  @Package_To_Run = 'Caspar_Warehouse_ACT0349_Extraction'
+			select NULL as contract_sid,null as udkey_1_sid,null as keyy,null as x_0,null as Contract_ID,null as Contract_ID_export,'Your Ouput is saved \\Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Extraction.txt' as Contract_Description,null as Contract_Status,null as Contribution_Type,null as Admin_Class,null as PG,null as Multi_Particpant,null as Keyword,null as x_1,null as Artist_Seq,null as Artist_Sort,null as Contributor_ID,null as Contributor_Name,null as Artist_Share,null as Artist_Pot,null as True_Artist_Share_Percent,null as x_2,null as Product_Seq,null as Product_Sort,null as Default_Type,null as Duplicate_PS,null as Product_ID,null as Product_Description,null as Product_Share,null as Product_List,null as x_3
+		END 
+		
+
+
+
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+/**********************************************************************************************************************************************/
+
+
+
+/*
+CREATE CLUSTERED INDEX fff on gh (Keyy)
+select 
+contract_sid,g.udkey_1_sid,g.keyy,g.x_0,g.Contract_ID,g.Contract_ID_export,g.Contract_Status,g.Contribution_Type,g.Admin_Class,g.PG,g.Multi_Particpant,g.x_1,g.Artist_Seq,g.Artist_Sort,g.Contributor_ID,g.Contributor_Name,g.Artist_Share,g.Artist_Pot,g.True_Artist_Share_Percent,g.x_2,g.Product_Seq,g.Product_Sort,g.Default_Type,g.Duplicate_PS,g.Product_ID,g.Product_Description,g.Product_Share,g.Product_List,g.x_3
+
+,CAST(CAST(g.Product_Share as float) as decimal(18,2)) AS PS
+,CAST(CAST(a.product_Share_Percentage as float) as decimal(18,2)) AS PS_Old
+, (CAST(CAST(g.Product_Share as float) as decimal(18,2)) - CAST(CAST(a.product_Share_Percentage as float) as decimal(18,2))) as variance
+
+from		GH g
+LEFT JOIN WWLDBMS7006.[Caspar_Warehouse_Supporting].[dbo].[ACT0026e_CRA] a ON a.keyy = g.keyy COLLATE DATABASE_DEFAULT
+where (CAST(CAST(g.Product_Share as float) as decimal(18,2)) - CAST(CAST(a.product_Share_Percentage as float) as decimal(18,2))) &lt;&gt; 0
+and Duplicate_PS &lt;&gt; 1
+
+and g.contract_sID = '12514'
+*/
+/*********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="contract_sid">
+          <DataField>contract_sid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="udkey_1_sid">
+          <DataField>udkey_1_sid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="keyy">
+          <DataField>keyy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="x_0">
+          <DataField>x_0</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contract_ID">
+          <DataField>Contract_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contract_ID_export">
+          <DataField>Contract_ID_export</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contract_Description">
+          <DataField>Contract_Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contract_Status">
+          <DataField>Contract_Status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contribution_Type">
+          <DataField>Contribution_Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Admin_Class">
+          <DataField>Admin_Class</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PG">
+          <DataField>PG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Multi_Particpant">
+          <DataField>Multi_Particpant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="keyword">
+          <DataField>keyword</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="x_1">
+          <DataField>x_1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Artist_Seq">
+          <DataField>Artist_Seq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Artist_Sort">
+          <DataField>Artist_Sort</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contributor_ID">
+          <DataField>Contributor_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contributor_Name">
+          <DataField>Contributor_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Artist_Share">
+          <DataField>Artist_Share</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Artist_Pot">
+          <DataField>Artist_Pot</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="True_Artist_Share_Percent">
+          <DataField>True_Artist_Share_Percent</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LOTCAPS_Resolved_Num">
+          <DataField>LOTCAPS_Resolved_Num</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="x_2">
+          <DataField>x_2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Seq">
+          <DataField>Product_Seq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Product_Sort">
+          <DataField>Product_Sort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Default_Type">
+          <DataField>Default_Type</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Duplicate_PS">
+          <DataField>Duplicate_PS</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Product_ID">
+          <DataField>Product_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Description">
+          <DataField>Product_Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Share">
+          <DataField>Product_Share</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Product_List">
+          <DataField>Product_List</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="x_3">
+          <DataField>x_3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Keywords">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>;with CTE AS
+(
+
+select  descr as keyword_description from c_keyword where descr &lt;&gt; ' '
+UNION ALL
+select  'All' keyword_description
+)
+select *
+from CTE
+Order by 
+(CASE WHEN keyword_description = 'All' THEN 1 ELSE 2 END)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="keyword_description">
+          <DataField>keyword_description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="Contract_ID_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Contract ID: All or 3002702,4101082</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Product_ID_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Product ID :All or BBCDVD1502,BBCDVD1330</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Contributor_ID_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Contributor ID : All or 20042790,16799350</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Contributor_Name_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Enter One Contributor Name</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Keyword_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Keyword</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Keywords</DataSetName>
+          <ValueField>keyword_description</ValueField>
+          <LabelField>keyword_description</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Output_Method_Input">
+      <DataType>String</DataType>
+      <Prompt>Method</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>Contracts_Only</Value>
+            <Label>Contract_Only</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Contracts_n_Contributor</Value>
+            <Label>Contracts_n_Contributor</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Contracts_n_ProductShare</Value>
+            <Label>Contracts_n_ProductShare</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Contracts_n_ContributorShare_n_ProductShare</Value>
+            <Label>Contracts_n_ContributorShare_n_ProductShare</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Direct_Output_CheckBox_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Output To Folder</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>0</Value>
+            <Label>No</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>Yes  \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Extraction.txt</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Direct_Input_Inclusion_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Use Inclusion File</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>No</Value>
+            <Label>No</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Contract</Value>
+            <Label>Yes_Contract - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Inclusion.txt</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Contributor_ID</Value>
+            <Label>Yes_Contributor_ID - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Inclusion.txt</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Product_Scope</Value>
+            <Label>Yes_Product_Scope -\Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Inclusion.txt</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Direct_Input_Exclusion_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Use Exclusion File</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>No</Value>
+            <Label>No</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Contract</Value>
+            <Label>Yes_Contract - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Exclusion.txt</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Contributor_ID</Value>
+            <Label>Yes_Contributor_ID - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Exclusion.txt</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Yes_Product_Scope</Value>
+            <Label>Yes_Product_Scope - \Worldwide\dfs\WDL\Departmental Secure\TA\Caspar_Extracts\CRA\ACT0349_Exclusion.txt</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Report_Folder_Input">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=IIF(Globals.ReportFolder="","/CasparReportManager/CRA V6.2/06 - Contracts",Globals.ReportFolder)</Value>
+        </Values>
+      </DefaultValue>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>91d91dab-c5ca-42d3-ad8f-59057a105cfd</rd:ReportID>
+</Report>
