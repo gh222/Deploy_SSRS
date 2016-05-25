@@ -18,18 +18,18 @@ namespace Deploy_SSRS
         string[] List_Of_Reports;
         public string FileSystemPath = @"E:\Reports\";
         public string SSRSWebServiceUrl = @"http://NIBS/ReportServer/ReportService2010.asmx?wsdl";
-        public string SSRS_Folder = ConfigurationManager.AppSettings["SSRS_Folder"];
-        public string SSRS_DataSource_Name; // = SSRS_Folder + @"_DataSource";
+        public string SSRSFolder = ConfigurationManager.AppSettings["SSRS_Folder"];
+        public string SSRSDataSource; // = SSRSFolder + @"_DataSource";
         DataSourceDefinition Definition;
     
 
         public SSRS_Deploy() {
-           SSRS_DataSource_Name = SSRS_Folder + @"_DataSource";
+           SSRSDataSource = SSRSFolder + @"_DataSource";
            if(Validate_Parameters())
             {
                 Initialize_webservice_proxy();
-                CreateSSRS_Folder();
-                CreateDataSource();
+                CreateSSRSFolder();
+              //  CreateDataSource("IPA");
               //  Upload_Reports();
             
             }
@@ -39,7 +39,7 @@ namespace Deploy_SSRS
             if (string.IsNullOrEmpty(this.FileSystemPath)) { throw new ArgumentNullException("this.FileSystemPath"); }
             //if (!File.Exists(this.FileSystemPath)) { throw new ApplicationException(string.Format("The file [{0}] does not exist", this.FileSystemPath)); }
             if (string.IsNullOrEmpty(this.SSRSWebServiceUrl)) { throw new ArgumentNullException("this.SSRSWebServiceUrl"); }
-            if (string.IsNullOrEmpty(this.SSRS_Folder)) { throw new ArgumentNullException("this.SSRS_Folder"); }
+            if (string.IsNullOrEmpty(this.SSRSFolder)) { throw new ArgumentNullException("this.SSRSFolder"); }
             return true;
         }
         private void Initialize_webservice_proxy()
@@ -74,133 +74,133 @@ namespace Deploy_SSRS
             return false;
         }
 
-        #region Create_Folder_n_DataSource
-        public void CreateSSRS_Folder()
+   //     #region Create_Folder_n_DataSource
+        public void CreateSSRSFolder()
         {
             string directory = @"";
-            bool folderExists = CheckIfReportExists(SSRS_Folder, directory,false);
+            bool folderExists = CheckIfReportExists(SSRSFolder, directory,false);
             if (!folderExists)
             {
-                rs.CreateFolder(SSRS_Folder, @"/", null);
+                rs.CreateFolder(SSRSFolder, @"/", null);
             }
-            Console.WriteLine("Folder Exists => " + SSRS_Folder);
+            Console.WriteLine("Folder Exists => " + SSRSFolder);
         }
-        public void CreateDataSource()
-        {
-            Definition = new DataSourceDefinition();
-            Definition.CredentialRetrieval = CredentialRetrievalEnum.Store;
-            Definition.ConnectString = "data source=NIBS;initial catalog=Books";
-            Definition.Enabled = true;
-            Definition.UserName = "GH";
-            Definition.Password = "GH";
-            Definition.EnabledSpecified = false;
-            Definition.Extension = "SQL";
-            Definition.ImpersonateUserSpecified = false;
-            Definition.Prompt = null;
-            Definition.WindowsCredentials = false;
+        //public void CreateDataSource()
+        //{
+        //    Definition = new DataSourceDefinition();
+        //    Definition.CredentialRetrieval = CredentialRetrievalEnum.Store;
+        //    Definition.ConnectString = "data source=NIBS;initial catalog=Books";
+        //    Definition.Enabled = true;
+        //    Definition.UserName = "GH";
+        //    Definition.Password = "GH";
+        //    Definition.EnabledSpecified = false;
+        //    Definition.Extension = "SQL";
+        //    Definition.ImpersonateUserSpecified = false;
+        //    Definition.Prompt = null;
+        //    Definition.WindowsCredentials = false;
 
-            Deploy_SSRS.ReportingServices2010.Property[] properties = new Deploy_SSRS.ReportingServices2010.Property[1];
-            Deploy_SSRS.ReportingServices2010.Property p = new Deploy_SSRS.ReportingServices2010.Property();
-            p.Name = "Hidden"; p.Value = "true";
-            properties[0] = p;
+        //    Deploy_SSRS.ReportingServices2010.Property[] properties = new Deploy_SSRS.ReportingServices2010.Property[1];
+        //    Deploy_SSRS.ReportingServices2010.Property p = new Deploy_SSRS.ReportingServices2010.Property();
+        //    p.Name = "Hidden"; p.Value = "true";
+        //    properties[0] = p;
 
-            bool IsFolderThere = CheckIfReportExists(SSRS_Folder, "/", false);
-            if (IsFolderThere)
-            {
-                rs.CreateDataSource(SSRS_DataSource_Name, "/" + SSRS_Folder, true, Definition, properties);
-                Console.WriteLine("Data Source Created => " + SSRS_DataSource_Name);
-            }
-            else {
-                Console.WriteLine("Data Source NOT Created as no Folder => " + SSRS_Folder);
-            }
-
-
+        //    bool IsFolderThere = CheckIfReportExists(SSRSFolder, "/",false);
+        //    if (IsFolderThere)
+        //    {
+        //        rs.CreateDataSource(SSRSDataSource, "/" + SSRSFolder, true, Definition, properties);
+        //        Console.WriteLine("Data Source Created => " + SSRSDataSource);
+        //    }
+        //    else {
+        //        Console.WriteLine("Data Source NOT Created as no Folder => " + SSRSFolder);
+        //    }
 
 
 
-            string directory = @"";
-            bool folderExists = CheckIfReportExists(SSRS_Folder, directory);
-            if (!folderExists)
-            {
-                rs.CreateFolder(SSRS_Folder, @"/", null);
-                Console.WriteLine(connection);
-            }
-            Console.WriteLine("Folder Exists => " + SSRS_Folder);
-        }
-#endregion
 
-        #region Reports_Upload
-        public void Upload_Reports()
-        {
-            Get_Reports();
-            DeleteReport();
-            PublishReport();
-        }
 
-        private void Get_Reports()
-        {
-            List_Of_Reports = Directory.GetFiles(FileSystemPath, "*.rdl"); //.Where(item => item.Contains("rdl") == true);
-        }
-        private void DeleteReport()
-        {
-            CatalogItem[] items = rs.ListChildren(@"/" + SSRS_Folder, true);
-            foreach (CatalogItem g in items)
-            {
+        //    //string directory = @"";
+        //    // bool folderExists = CheckIfReportExists(SSRSFolder, directory);
+        //    //  if (!folderExists)
+        //    //  {
+        //    //      rs.CreateFolder(SSRSFolder, @"/", null);
+        //    //Console.WriteLine(connection);
+        //    //  }
+        //    //  Console.WriteLine("Folder Exists => " + SSRSFolder);
+        //}
+        //#endregion
 
-                if (g.TypeName != "DataSource")
-                {
-                    rs.DeleteItem(@"/" + SSRS_Folder + @"/" + g.Name);
-                    Console.WriteLine(@"Deleted => /" + SSRS_Folder + @"/" + g.Name);
-                }
+        //#region Reports_Upload
+        ////public void Upload_Reports()
+        ////{
+        ////    Get_Reports();
+        ////    DeleteReport();
+        ////    PublishReport();
+        ////}
 
-            }
+        ////private void Get_Reports()
+        ////{
+        ////    List_Of_Reports = Directory.GetFiles(FileSystemPath, "*.rdl"); //.Where(item => item.Contains("rdl") == true);
+        ////}
+        ////private void DeleteReport()
+        ////{
+        ////    CatalogItem[] items = rs.ListChildren(@"/"+ SSRSFolder, true);
+        ////    foreach (CatalogItem g in items)
+        ////        {
+                
+        ////        if(g.TypeName != "DataSource")
+        ////        {
+        ////            rs.DeleteItem(@"/" + SSRSFolder + @"/" + g.Name);
+        ////            Console.WriteLine(@"Deleted => /" + SSRSFolder + @"/" + g.Name);
+        ////        }
+     
+        ////    }
 
-        }
+        ////}
 
-        private void PublishReport()
-        {
-            DataSource[] sourcs = Report_DataSource();
-            Warning[] warnings = null;
-            FileInfo fileInfo;
-            byte[] fileContents;
+        ////private void PublishReport()
+        ////{
+        ////    DataSource[] sourcs = Report_DataSource();
+        ////    Warning[] warnings= null;
+        ////    FileInfo fileInfo;
+        ////    byte[] fileContents;
 
-            foreach (string s in List_Of_Reports)
-            {
-                fileInfo = new FileInfo(s);
-                fileNameWithoutExtension = Path.GetFileNameWithoutExtension(s);
-                fileContents = File.ReadAllBytes(fileInfo.FullName);
-                rs.CreateCatalogItem("Report", fileNameWithoutExtension, @"/" + SSRS_Folder, true, fileContents, null, out warnings);
-                //   Report_DataSource(@"/" + SSRS_Folder +@"/"+fileNameWithoutExtension);
-            }
-            if (warnings == null)
-            {
-                Console.WriteLine("Report Uploaded => " + fileNameWithoutExtension);
-            }
-            if (warnings != null)
-            {
-                foreach (Warning warning in warnings)
-                {
-                    Console.WriteLine(warning);
-                }
-            }
+        ////    foreach (string s in List_Of_Reports)
+        ////    {
+        ////       fileInfo = new FileInfo(s);
+        ////       fileNameWithoutExtension = Path.GetFileNameWithoutExtension(s);
+        ////       fileContents = File.ReadAllBytes(fileInfo.FullName);
+        ////       rs.CreateCatalogItem("Report", fileNameWithoutExtension, @"/" + SSRSFolder, true, fileContents, null, out warnings);
+        ////     //   Report_DataSource(@"/" + SSRSFolder +@"/"+fileNameWithoutExtension);
+        ////    }
+        ////    if(warnings == null)
+        ////    {
+        ////        Console.WriteLine("Report Uploaded => " + fileNameWithoutExtension);
+        ////    }
+        ////        if (warnings != null)
+        ////    {
+        ////        foreach (Warning warning in warnings)
+        ////        {
+        ////            Console.WriteLine(warning);
+        ////        }
+        ////   }
 
-        }
+        ////}
 
-        private DataSource[] Report_DataSource()
-        {
-            //DataSourceReference reference = new DataSourceReference();
-            DataSource[] sources; = new DataSource[1];
-            DataSource s = new DataSource();
-            s.Item = Definition;
-            s.Name = "Temp_DataSource";
-            sources[0] = s;
-            //  Console.WriteLine(rdl);
-            //rs.SetItemDataSources(rdl, sources);
-            return sources;
+        ////private DataSource[] Report_DataSource()
+        ////{
+        ////    //DataSourceReference reference = new DataSourceReference();
+        ////    DataSource[] sources; = new DataSource[1];
+        ////    DataSource s = new DataSource();
+        ////    s.Item = Definition;
+        ////    s.Name = "Temp_DataSource";
+        ////    sources[0] = s;
+        ////  //  Console.WriteLine(rdl);
+        ////    //rs.SetItemDataSources(rdl, sources);
+        ////    return sources;
 
-        }
+        ////}
 
-        #endregion
+        //#endregion
 
     }
 }

@@ -13,7 +13,7 @@ namespace Deploy_SSRS
             
 
             SSRS_Deploy s = new SSRS_Deploy();
-        //    s.CreateSSRSFolder();
+            s.CreateSSRSFolder();
          //   s.CreateDataSource();
          //   s.Upload_Reports();
 
