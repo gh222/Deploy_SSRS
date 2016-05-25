@@ -10,7 +10,7 @@
     <description>Contains all SQL Server Reporting Services reports and scripts required to create a fully functional environment</description>
   </metadata>
   <files>
-  <file src="..\RDL\*.rdl" target="Reports" />
+  <file src="..\RDL\Reports\**\*.rdl" target="Reports" />
     <file src="..\RDL\*.sql" target="Sql" />
 	<file src="..\RDL\*.ps1" target="Powershell" />
 	<file src="..\RDL\DLL\*.dll" target="DLL" />
